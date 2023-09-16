@@ -8,7 +8,6 @@ import VideoBG from "@/components/videoBg";
 import phantom from "@/assets/images/phantom.webp";
 import jeep from "@/assets/images/jeep.webp";
 import escalade from "@/assets/images/escalade.webp";
-import work from "@/assets/videos/work.mp4";
 import teslaParallax from "@/assets/images/teslaParallax.webp";
 
 export default function Home() {
@@ -171,7 +170,7 @@ export default function Home() {
             muted
             loop
           >
-            <source src={work} />
+            <source src="https://video.wixstatic.com/video/a0b3fa_6487d60583a4466cb2175fa40d02039e/1080p/mp4/file.mp4" />
           </video>
         </div>
 
