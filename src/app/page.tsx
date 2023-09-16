@@ -28,17 +28,17 @@ export default function Home() {
           <h3 className="text-white uppercase">About Us</h3>
           <h4 className="text-white">Our Story and Commitment to Excellence</h4>
           <p className="text-white">
-            At Abbos Detailing, we're passionate about cars and dedicated to
+            At Abbos Detailing, we&apos;re passionate about cars and dedicated to
             delivering exceptional auto detailing services that exceed our
-            clients' expectations. Our commitment to excellence is reflected in
+            clients&apos; expectations. Our commitment to excellence is reflected in
             every aspect of our service. From the products we use to the
             techniques we employ, we go above and beyond to ensure that your car
-            receives the attention it deserves. Whether it's a simple wash or a
+            receives the attention it deserves. Whether it&apos;s a simple wash or a
             full detail, we treat every vehicle with the same level of care and
             precision.
           </p>
           <p className="text-white">
-            If you're looking for a professional, reliable, and top-quality auto
+            If you&apos;re looking for a professional, reliable, and top-quality auto
             detailing service, look no further than Abbos Detailing. Contact us
             today to schedule your appointment and experience the difference for
             yourself.
