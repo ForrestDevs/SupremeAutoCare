@@ -20,6 +20,9 @@ export default function Home() {
           autoPlay
           muted
           loop
+          playsInline // Ensure video auto-plays on mobile devices
+          disablePictureInPicture // Prevents iOS native player from opening
+          webkit-playsinline="true" // Additional attribute for iOS devices
         >
           <source src="https://video.wixstatic.com/video/a0b3fa_7a17f2afe1254fd69869d2f84e8c3415/1080p/mp4/file.mp4" />
         </video>
@@ -31,9 +34,9 @@ export default function Home() {
           <h2 className="text-slate-300 font-cin text-sp1 md:text-lp1">
             Experience Detailing That Goes Above And Beyond Your Expectations
           </h2>
-          <div className="mt-16 border rounded-2xl border-slate-900 hover:bg-white max-w-fit p-2 mx-auto bg-gray-600">
+          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-white max-w-fit p-2 mx-auto bg-slate-900">
             <Link href={"/services"}>
-              <h2 className="text-slate-200 font-cin text-sp1 md:text-lp1 hover:text-black">
+              <h2 className="text-slate-200 text-xl md:text-2xl font-medium hover:text-black">
                 Book Now
               </h2>
             </Link>
@@ -218,6 +221,9 @@ export default function Home() {
             autoPlay
             muted
             loop
+            playsInline // Ensure video auto-plays on mobile devices
+            disablePictureInPicture // Prevents iOS native player from opening
+            webkit-playsinline="true" // Additional attribute for iOS devices
           >
             <source src="https://video.wixstatic.com/video/a0b3fa_6487d60583a4466cb2175fa40d02039e/1080p/mp4/file.mp4" />
           </video>

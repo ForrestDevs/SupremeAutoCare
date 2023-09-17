@@ -27,12 +27,12 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="flex flex-col w-full relative min-h-[40vh] bg-white px-40 py-16">
-        <div className="border-l border-gray-300 bg-red-100 py-4">
-          <h2 className="text-left">
+      <section className="flex flex-col w-full bg-white">
+        <div className="border-l border-gray-500 m-16 h-full pb-8">
+          <h2 className="text-black text-sh6 md:lh6 uppercase font-light pl-8 mb-4">
             Our Approach
           </h2>
-          <p className="border-l-4 border-black">
+          <p className="text-black text-sp1 md:text-lp1 border-l-2 border-black pl-8">
             We offer a comprehensive range of services to ensure your vehicle
             looks and feels its absolute best. From high-end detailing to
             ceramic coating and paint protection, our team of experienced
@@ -42,17 +42,23 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="flex w-full min-h-[80vh] bg-black">
+      <section className="flex flex-col w-full min-h-[80vh] bg-black">
         <div>
-          <h2>Detailing</h2>
+          <h2 className="text-white text-sh3 md:text-lh3 uppercase font-light">
+            Detailing
+          </h2>
         </div>
 
         <div>
-          <h2>Correction</h2>
+          <h2 className="text-white text-sh3 md:text-lh3 uppercase font-light">
+            Correction
+          </h2>
         </div>
 
         <div>
-          <h2>Ceramic Coating</h2>
+          <h2 className="text-white text-sh3 md:text-lh3 uppercase font-light">
+            Ceramic Coating
+          </h2>
         </div>
       </section>
     </main>

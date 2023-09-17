@@ -10,6 +10,9 @@ export default function Gallery() {
           autoPlay
           muted
           loop
+          playsInline // Ensure video auto-plays on mobile devices
+          disablePictureInPicture // Prevents iOS native player from opening
+          webkit-playsinline="true" // Additional attribute for iOS devices
         >
           <source src="https://video.wixstatic.com/video/a0b3fa_192ca6f47181454e8c76906d3f08103d/720p/mp4/file.mp4" />
         </video>
@@ -22,9 +25,9 @@ export default function Gallery() {
             Welcome to our gallery page, where you can browse through stunning
             images of the cars we&apos;ve had the pleasure of working on
           </h2>
-          <div className="mt-16 border rounded-xl hover:bg-slate-400 max-w-fit p-2 mx-auto">
+          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-white max-w-fit p-2 mx-auto bg-slate-900">
             <Link href={"/services"}>
-              <h2 className="text-slate-300 text-xl md:text-2xl font-medium">
+              <h2 className="text-slate-200 text-xl md:text-2xl font-medium hover:text-black">
                 Book Now
               </h2>
             </Link>
