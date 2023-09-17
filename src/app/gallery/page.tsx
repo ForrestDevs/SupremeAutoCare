@@ -20,7 +20,7 @@ export default function Gallery() {
           </h1>
           <h2 className="text-slate-300 text-xl md:text-2xl font-medium">
             Welcome to our gallery page, where you can browse through stunning
-            images of the cars we've had the pleasure of working on
+            images of the cars we&apos;ve had the pleasure of working on
           </h2>
           <div className="mt-16 border rounded-xl hover:bg-slate-400 max-w-fit p-2 mx-auto">
             <Link href={"/services"}>
