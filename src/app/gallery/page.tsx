@@ -5,7 +5,7 @@ export default function Gallery() {
     <main className="flex flex-col justify-between w-full bg-black">
       <section className="flex relative w-full h-[75vh]">
         <video
-          className="h-full w-[4000px] absolute top-0 left-0 object-cover z-1 blur-sm"
+          className="h-full w-[4000px] absolute top-0 left-0 object-cover z-1"
           controls={false}
           autoPlay
           muted
@@ -18,16 +18,19 @@ export default function Gallery() {
         </video>
 
         <div className="z-2 absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-full text-center flex-col gap-2">
-          <h1 className="text-white text-2xl md:text-4xl font-semibold">
-            GALLERY
-          </h1>
-          <h2 className="text-slate-300 text-xl md:text-2xl font-medium">
-            Welcome to our gallery page, where you can browse through stunning
-            images of the cars we&apos;ve had the pleasure of working on
-          </h2>
-          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-white max-w-fit p-2 mx-auto bg-slate-900">
+          <div className="bg-slate-800/40 mx-14">
+            <h1 className="text-white font-cin text-sh2 sm:text-sh1 md:text-lh1 mx-8 uppercase">
+              Gallery
+            </h1>
+            <h2 className="text-slate-300 font-cin text-sp1 md:text-lp1">
+              Where you can browse through stunning images of the cars
+              we&apos;ve had the pleasure to detail
+            </h2>
+          </div>
+
+          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
             <Link href={"/services"}>
-              <h2 className="text-slate-200 text-xl md:text-2xl font-medium hover:text-black">
+              <h2 className="text-black text-xl md:text-2xl font-medium ">
                 Book Now
               </h2>
             </Link>

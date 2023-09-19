@@ -42,17 +42,17 @@ export default function RootLayout({
                 <ul className="flex items-center justify-start gap-6">
                   <li key="home">
                     <Link href="/">
-                      <span className="text-white">Home</span>
+                      <span className="text-white underline text-sh3 md:text-lh3">Home</span>
                     </Link>
                   </li>
                   <li key="gallery">
                     <Link href="/gallery">
-                      <span className="text-white">Gallery</span>
+                      <span className="text-white underline text-sh3 md:text-lh3">Gallery</span>
                     </Link>
                   </li>
                   <li key="services">
                     <Link href="/services">
-                      <span className="text-white">Services</span>
+                      <span className="text-white underline text-sh3 md:text-lh3">Services</span>
                     </Link>
                   </li>
                 </ul>
@@ -101,7 +101,7 @@ export default function RootLayout({
                 Sign up to recive promotional updates
               </p>
               <form className="w-full max-w-sm">
-                <div className="flex items-center border-b-2 border-teal-500 py-2">
+                <div className="flex items-center py-2">
                   <input
                     className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                     type="email"

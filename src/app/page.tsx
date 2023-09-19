@@ -12,10 +12,10 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-between w-full bg-black">
+    <main className="flex flex-col justify-between w-full">
       <section className="flex relative w-full h-[75vh]">
         <video
-          className="h-full w-[4000px] absolute top-0 left-0 object-cover z-1 blur-sm"
+          className="h-full w-[4000px] absolute top-0 left-0 object-cover z-1"
           controls={false}
           autoPlay
           muted
@@ -28,15 +28,18 @@ export default function Home() {
         </video>
 
         <div className="z-2 absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-full text-center flex-col gap-2">
-          <h1 className="text-white font-cin text-sh2 sm:text-sh1 md:text-lh1 mx-8">
-            UNMATHCED QUALITY, UNFORGETTABLE SHINE
-          </h1>
-          <h2 className="text-slate-300 font-cin text-sp1 md:text-lp1">
-            Experience Detailing That Goes Above And Beyond Your Expectations
-          </h2>
-          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-white max-w-fit p-2 mx-auto bg-slate-900">
+          <div className="bg-slate-800/40 mx-14">
+            <h1 className="text-white font-cin text-sh2 sm:text-sh1 md:text-lh1 mx-8">
+              UNMATHCED QUALITY, UNFORGETTABLE SHINE
+            </h1>
+            <h2 className="text-slate-300 font-cin text-sp1 md:text-lp1">
+              Experience Detailing That Goes Above And Beyond Your Expectations
+            </h2>
+          </div>
+
+          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
             <Link href={"/services"}>
-              <h2 className="text-slate-200 text-xl md:text-2xl font-medium hover:text-black">
+              <h2 className="text-black text-xl md:text-2xl font-medium ">
                 Book Now
               </h2>
             </Link>
@@ -44,9 +47,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row w-full xl:my-16 bg-gradient-to-tr from-black from-85% to-slate-800">
-        <div className="border-l border-gray-600 m-16 md:w-[50%]">
-          <div className="flex flex-col items-start">
+      <section className="flex flex-col md:flex-row w-full xl:py-16 bg-gradient-to-tr from-black from-85% to-slate-800">
+        <div className="flex items-center m-16 md:w-[50%]">
+          <div className="flex flex-col items-start border-l border-gray-600">
             <h3 className="text-white text-sh6 md:text-lh6 mb-4 pl-8">
               ABOUT US
             </h3>
@@ -73,18 +76,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hidden md:w-[50%] md:flex bg-blue-500">
+        <div className="hidden md:w-[50%] md:flex">
           <Image
             src={nissan}
             alt="Nissan Car"
-            className="h-full w-[2000px] object-cover"
+            className="h-full w-auto object-cover"
             priority
           />
         </div>
       </section>
 
-      <section className="flex flex-col  bg-white">
-        <div className="w-full border-l border-gray-600 my-8 pb-8 m-16">
+      <section className="flex flex-col w-full bg-white">
+        <div className="border-l border-gray-600 my-8 pb-8 ml-16">
           <div className="w-1/3 ">
             <h3 className="text-black uppercase text-sh6 md:text-lh6 pl-8 mb-4">
               Services
@@ -270,8 +273,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row bg-black items-center md:items-start">
-        <div className="w-full md:w-1/2 m-16 mr-4 pr-24 h-full md:h-auto">
+      <section className="flex flex-col md:flex-row bg-black items-center">
+        <div className="flex items-center w-full md:w-1/2 m-16 mr-4 pr-24 h-full md:h-auto">
           <div className="border-l">
             <h3 className="text-white uppercase text-sh6 md:text-lh6 font-medium pl-8 mb-6">
               Our Work
@@ -293,7 +296,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 grid gap-24 grid-cols-2 m-16 pr-24 h-full md:h-auto items-center md:items-start">
+        <div className="w-full md:w-1/2 grid gap-16 grid-cols-2 m-16 pr-24 h-full md:h-auto items-center md:items-start">
           <div className="flex flex-col items-center m-4 w-full h-full ">
             <Image
               src={tesla}

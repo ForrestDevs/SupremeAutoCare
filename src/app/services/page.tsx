@@ -9,7 +9,7 @@ export default function Services() {
         <Image
           src={hero}
           alt="Abbos Detailing Logo"
-          className="h-full w-[4000px] object-cover z-1 blur-xs"
+          className="h-full w-[4000px] object-cover z-1 blur-xs mt-16"
           priority
         />
 
