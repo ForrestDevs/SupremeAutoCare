@@ -42,17 +42,23 @@ export default function RootLayout({
                 <ul className="flex items-center justify-start gap-6">
                   <li key="home">
                     <Link href="/">
-                      <span className="text-white underline text-sh3 md:text-lh3">Home</span>
+                      <span className="text-white underline text-sh3 md:text-lh3">
+                        Home
+                      </span>
                     </Link>
                   </li>
                   <li key="gallery">
                     <Link href="/gallery">
-                      <span className="text-white underline text-sh3 md:text-lh3">Gallery</span>
+                      <span className="text-white underline text-sh3 md:text-lh3">
+                        Gallery
+                      </span>
                     </Link>
                   </li>
                   <li key="services">
                     <Link href="/services">
-                      <span className="text-white underline text-sh3 md:text-lh3">Services</span>
+                      <span className="text-white underline text-sh3 md:text-lh3">
+                        Services
+                      </span>
                     </Link>
                   </li>
                 </ul>
@@ -61,62 +67,76 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <footer className="bg-white pb-16 mx-8 pt-8">
-          <div className="flex flex-row items-center justify-evenly">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <Image
-                src={Logo}
-                alt="Abbos Detailing Logo"
-                width={250}
-                height={250}
-                priority
-              />
-              <div className="flex flex-col items-start justify-evenly gap-4">
-                <p className="text-black text-sp2 md:text-lp2">
-                  <strong>Tel:</strong> (647)534-1245
-                </p>
-                <p className="text-black text-sp2 md:text-lp2">
-                  <strong>Email:</strong> Abbosdetailing@gmail.com
-                </p>
-                <p className="text-black text-sp2 md:text-lp2">
-                  <strong>Location:</strong> 88 Crockford Blvd #10, Scarborough,
-                  Ontario, M1R 3C3
-                </p>
-                <div className="flex flex-row items-center justify-start gap-8 w-full">
-                  <Link href={"https://www.facebook.com/Abbo.Detailing"}>
-                    <Facebook />
-                  </Link>
-                  <Link href={"https://www.instagram.com/abbosdetailing/"}>
-                    <Instagram />
-                  </Link>
-                </div>
-              </div>
-            </div>
+        <footer className="flex flex-col items-center lg:flex-row justify-evenly gap-4 p-6">
+          <div className="h-full order-1 lg:order-none ">
+            <Image
+              src={Logo}
+              alt="Abbos Detailing Logo"
+              width={250}
+              height={250}
+              priority
+            />
+          </div>
 
-            <div className="flex flex-col items-start justify-start ">
-              <h4 className="text-black text-sp2 md:text-lp2 uppercase font-semibold mb-6">
-                Subscribe
-              </h4>
-              <p className="text-black text-sp2 md:text-lp2 mb-6">
-                Sign up to recive promotional updates
-              </p>
-              <form className="w-full max-w-sm">
-                <div className="flex items-center py-2">
-                  <input
-                    className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
-                    type="email"
-                    placeholder="Email"
-                    aria-label="Email"
-                  />
-                  <button
-                    className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
-                    type="button"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </form>
+          <div className="flex flex-col sm:items-center lg:items-start gap-4 h-full order-3 lg:order-none w-full lg:w-auto">
+            <Link href="tel:(647)534-1245">
+              <strong className="text-black text-lp2">Tel: </strong>
+              <span className="text-black text-lp2">
+                (647)534-1245
+              </span>
+            </Link>
+            <Link href="mailto:Abbosdetailing@gmail.com">
+              <strong className="text-black text-lp2">
+                Email:{" "}
+              </strong>
+              <span className="text-black text-lp2 underline">
+                Abbosdetailing@gmail.com
+              </span>
+            </Link>
+            <Link
+              href="https://www.google.com/maps/search/?api=1&query=88+Crockford+Blvd+%2310,+Scarborough,+Ontario,+M1R+3C3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong className="text-black text-lp2">Location: </strong>
+              <span className="text-black text-lp2 underline">
+                88 Crockford Blvd #10, Scarborough, Ontario, M1R 3C3
+              </span>
+            </Link>
+
+            <div className="flex flex-row items-center justify-start sm:justify-center lg:justify-start gap-8 w-full">
+              <Link href={"https://www.facebook.com/Abbo.Detailing"}>
+                <Facebook />
+              </Link>
+              <Link href={"https://www.instagram.com/abbosdetailing/"}>
+                <Instagram />
+              </Link>
             </div>
+          </div>
+
+          <div className="flex flex-col sm:items-center lg:items-start h-full order-2 lg:order-none w-full lg:w-auto">
+            <h4 className="text-black text-lp2 uppercase font-semibold mb-6">
+              Subscribe
+            </h4>
+            <p className="text-black text-lp2 mb-6">
+              Sign up to recive promotional updates
+            </p>
+            <form className="w-full max-w-sm">
+              <div className="flex items-center py-2 ">
+                <input
+                  className="rounded-lg border border-black w-full text-gray-700 mr-3 py-2 px-2 leading-tight focus:outline-none"
+                  type="email"
+                  placeholder="Email"
+                  aria-label="Email"
+                />
+                <button
+                  className="flex-shrink-0 bg-white hover:bg-slate-300 border border-black text-sm text-black py-2 px-2 rounded-lg"
+                  type="button"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
           </div>
         </footer>
         <TailwindIndicator />

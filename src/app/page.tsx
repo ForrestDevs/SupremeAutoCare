@@ -273,8 +273,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row bg-black items-center">
-        <div className="flex items-center w-full md:w-1/2 m-16 mr-4 pr-24 h-full md:h-auto">
+      <section className="flex flex-col lg:flex-row bg-black items-center">
+        <div className="flex items-center w-full lg:w-1/2 m-16 mr-4 pr-24 h-full lg:h-auto">
           <div className="border-l">
             <h3 className="text-white uppercase text-sh6 md:text-lh6 font-medium pl-8 mb-6">
               Our Work
@@ -296,7 +296,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 grid gap-16 grid-cols-2 m-16 pr-24 h-full md:h-auto items-center md:items-start">
+        <div className="w-full lg:w-1/2 grid gap-16 grid-cols-2 m-16 pr-24 h-full lg:h-auto items-center lg:items-start">
           <div className="flex flex-col items-center m-4 w-full h-full ">
             <Image
               src={tesla}
