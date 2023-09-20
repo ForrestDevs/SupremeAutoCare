@@ -32,9 +32,9 @@ export default function Services() {
               Experience Detailing That Goes Above and Beyond Your Expectations
             </h2>
           </div>
-          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-white max-w-fit p-2 mx-auto bg-slate-900">
+          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
             <Link href={"/services"}>
-              <h2 className="text-slate-200 text-xl md:text-2xl font-medium hover:text-black">
+              <h2 className="text-black text-xl md:text-2xl font-medium ">
                 Book Now
               </h2>
             </Link>

@@ -38,7 +38,16 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className="flex w-full min-h-[75vh]"></section>
+      <section className="flex w-full min-h-[75vh]">
+        <div className="flex flex-col items-center justify-evenly">
+          <h2 className="text-white text-sh1 md:text-lh1 uppercase font-light border-b">
+            OUR WORK
+          </h2>
+          <div>
+            
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
