@@ -1,11 +1,12 @@
 import Link from "next/link";
 
-export default function Gallery() {
+export default function Section1() {
   return (
-    <main className="flex flex-col justify-between w-full bg-black">
-      <section className="flex relative w-full h-[100vh]">
+    <>
+      <div className="h-[100vh]"></div>
+      <section className="fixed flex w-full h-[100vh] -z-1">
         <video
-          className="h-full w-[4000px] absolute top-0 left-0 object-cover z-1"
+          className="h-full w-auto absolute top-0 left-0 object-cover z-1"
           controls={false}
           autoPlay
           muted
@@ -14,17 +15,16 @@ export default function Gallery() {
           disablePictureInPicture // Prevents iOS native player from opening
           webkit-playsinline="true" // Additional attribute for iOS devices
         >
-          <source src="https://video.wixstatic.com/video/a0b3fa_192ca6f47181454e8c76906d3f08103d/720p/mp4/file.mp4" />
+          <source src="https://video.wixstatic.com/video/a0b3fa_7a17f2afe1254fd69869d2f84e8c3415/1080p/mp4/file.mp4" />
         </video>
 
         <div className="z-2 absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-full text-center flex-col gap-2">
-          <div className="bg-slate-800/40 w-fit mx-auto">
-            <h1 className="text-white font-cin text-sh1 md:text-lh1 mx-8 uppercase">
-              Gallery
+          <div className="bg-slate-800/40 mx-auto w-fit">
+            <h1 className="text-white font-cin text-sh1 lg:text-lh1 mx-8">
+              UNMATHCED QUALITY, UNFORGETTABLE SHINE
             </h1>
-            <h2 className="text-slate-300 font-cin text-sp1 md:text-lp1 mx-8">
-              Where you can browse through stunning images of the cars
-              we&apos;ve had the pleasure to detail
+            <h2 className="text-slate-300 font-cin text-sp1 lg:text-lp1">
+              Experience Detailing That Goes Above And Beyond Your Expectations
             </h2>
           </div>
 
@@ -37,8 +37,6 @@ export default function Gallery() {
           </div>
         </div>
       </section>
-
-      <section className="flex w-full min-h-[75vh]"></section>
-    </main>
+    </>
   );
 }

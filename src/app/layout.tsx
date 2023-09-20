@@ -5,7 +5,8 @@ import { Playfair_Display } from "next/font/google";
 import { TailwindIndicator } from "@/components/tailwindIndicator";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/assets/images/abosLogo.webp";
+import Logo from "@/assets/logo/logoTransparent.png";
+import LogoBlack from "@/assets/logo/logoBlack.png";
 import { Facebook, Instagram } from "lucide-react";
 
 const font = Playfair_Display({
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <header className="w-full backdrop-filter backdrop-blur-sm bg-slate-600/10 absolute top-0 right-0 z-10">
+        <header className="w-full backdrop-filter backdrop-blur-sm bg-slate-600/10 fixed top-0 right-0 z-50">
           <div className="max-w-7xl mx-auto">
             <div className="flex max-w-screen-xl mx-auto items-center justify-between px-8">
               <Link href="/">
@@ -35,6 +36,7 @@ export default function RootLayout({
                   width={200}
                   height={200}
                   priority
+                  className="p-2"
                 />
               </Link>
 
@@ -67,7 +69,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <footer className="flex flex-col items-center lg:flex-row justify-evenly gap-4 p-6">
+        <footer className="flex flex-col relative items-center lg:flex-row justify-evenly gap-4 p-6 bg-black text-white">
           <div className="h-full order-1 lg:order-none ">
             <Image
               src={Logo}
@@ -80,16 +82,16 @@ export default function RootLayout({
 
           <div className="flex flex-col sm:items-center lg:items-start gap-4 h-full order-3 lg:order-none w-full lg:w-auto">
             <Link href="tel:(647)534-1245">
-              <strong className="text-black text-lp2">Tel: </strong>
-              <span className="text-black text-lp2">
+              <strong className="text-lp2">Tel: </strong>
+              <span className="text-lp2">
                 (647)534-1245
               </span>
             </Link>
             <Link href="mailto:Abbosdetailing@gmail.com">
-              <strong className="text-black text-lp2">
+              <strong className="text-lp2">
                 Email:{" "}
               </strong>
-              <span className="text-black text-lp2 underline">
+              <span className="text-lp2 underline">
                 Abbosdetailing@gmail.com
               </span>
             </Link>
@@ -98,8 +100,8 @@ export default function RootLayout({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong className="text-black text-lp2">Location: </strong>
-              <span className="text-black text-lp2 underline">
+              <strong className="text-lp2">Location: </strong>
+              <span className="text-lp2 underline">
                 88 Crockford Blvd #10, Scarborough, Ontario, M1R 3C3
               </span>
             </Link>
@@ -115,10 +117,10 @@ export default function RootLayout({
           </div>
 
           <div className="flex flex-col sm:items-center lg:items-start h-full order-2 lg:order-none w-full lg:w-auto">
-            <h4 className="text-black text-lp2 uppercase font-semibold mb-6">
+            <h4 className="text-lp2 uppercase font-semibold mb-6">
               Subscribe
             </h4>
-            <p className="text-black text-lp2 mb-6">
+            <p className="text-lp2 mb-6">
               Sign up to recive promotional updates
             </p>
             <form className="w-full max-w-sm">
