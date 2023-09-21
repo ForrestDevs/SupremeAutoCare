@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Carousel from "@/components/gallery/Carousel";
 
-const SLIDE_COUNT = 10;
+const SLIDE_COUNT = 14;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function Gallery() {

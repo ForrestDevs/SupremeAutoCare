@@ -1,14 +1,11 @@
 import "./globals.css";
-import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import { TailwindIndicator } from "@/components/custom/tailwindIndicator";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/assets/logo/logoTransparent.png";
-import LogoBlack from "@/assets/logo/logoBlack.png";
 import { Facebook, Instagram } from "lucide-react";
-import "../css/emble.css";
 import localFont from "next/font/local";
 
 // Font files can be colocated inside of `app`

@@ -21,31 +21,31 @@ export default function Section5() {
           Abbos Detailing In Numbers
         </h3>
 
-        <div className="grid gap-24 grid-cols-2">
+        <div className="grid gap-x-16 gap-y-8 grid-cols-2">
           <span className="flex flex-col items-start justify-evenly">
-            <p className="text-sh2 md:text-lh2 font-mont font-light">8+</p>
-            <p className="text-sp2 md:text-lp2 font-pf font-medium w-full uppercase pt-6">
+            <p className="text-sh2 md:text-lh2 font-light">8+</p>
+            <p className="text-sp2 md:text-lp2 font-medium w-full uppercase pt-6">
               Experience
             </p>
           </span>
 
           <span className="flex flex-col items-start justify-evenly">
-            <p className="text-sh2 md:text-lh2 font-mont font-light ">100$+</p>
-            <p className="text-sp2 md:text-lp2 font-pf font-medium  w-full uppercase pt-6 ">
+            <p className="text-sh2 md:text-lh2 font-light ">100$+</p>
+            <p className="text-sp2 md:text-lp2 font-medium  w-full uppercase pt-6 ">
               Cost Per Service
             </p>
           </span>
 
           <span className="flex flex-col items-start justify-evenly">
-            <p className="text-sh2 md:text-lh2 font-mont font-light">500+</p>
-            <p className="text-sp2 md:text-lp2 font-pf font-medium w-full uppercase pt-6 ">
+            <p className="text-sh2 md:text-lh2 font-light">500+</p>
+            <p className="text-sp2 md:text-lp2 font-medium w-full uppercase pt-6 ">
               Customers
             </p>
           </span>
 
           <span className="flex flex-col items-start justify-evenly">
-            <p className="text-sh2 md:text-lh2 font-mont font-light  ">100%</p>
-            <p className="text-sp2 md:text-lp2 font-pf font-medium w-full uppercase pt-6 ">
+            <p className="text-sh2 md:text-lh2 font-light  ">100%</p>
+            <p className="text-sp2 md:text-lp2 font-medium w-full uppercase pt-6 ">
               Returning Customers
             </p>
           </span>

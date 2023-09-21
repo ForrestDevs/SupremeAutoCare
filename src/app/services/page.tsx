@@ -17,7 +17,7 @@ import ScrollLink from "@/components/custom/ScrollLink";
 export default function Services() {
   return (
     <main className="flex flex-col justify-between w-full bg-black">
-      <section className="flex items-center relative w-full h-[75vh]">
+      <section className="flex items-center relative w-full h-[100vh]">
         <Image
           src={hero}
           alt="Abbos Detailing Logo"

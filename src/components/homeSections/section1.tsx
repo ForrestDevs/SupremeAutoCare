@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function Section1() {
   return (
     <>
-      <section className="stack">
+      <section className="flex relative w-full h-[100vh]">
         <video
-          className="h-screen w-auto object-cover grid place-content-center blur-xs"
+          className="h-full w-[4000px] absolute top-0 left-0 object-cover z-1"
           controls={false}
           autoPlay
           muted
@@ -17,8 +17,8 @@ export default function Section1() {
           <source src="https://video.wixstatic.com/video/a0b3fa_7a17f2afe1254fd69869d2f84e8c3415/1080p/mp4/file.mp4" />
         </video>
 
-        <div className="grid place-content-center text-center">
-          <div className="mx-auto w-fit">
+        <div className="flex-col text-center absolute w-full top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
+          <div className="w-fit mx-auto bg-slate-800/30 ">
             <div className="flex flex-col">
               <h1 className="text-white text-sh1 md:text-lh1 mx-8 font-bold italic">
                 UNMATHCED QUALITY,
@@ -27,12 +27,12 @@ export default function Section1() {
                 UNFORGETTABLE SHINE
               </h1>
             </div>
-            <h2 className="text-white text-sh4 md:text-lh4">
+            <h2 className="text-white text-sh4 md:text-lh4 px-6">
               Experience Detailing That Goes Above And Beyond Your Expectations
             </h2>
           </div>
 
-          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-[#ED1C24] max-w-fit p-4 mx-auto bg-white">
+          <div className="mt-16 btn">
             <Link href={"/services"}>
               <h2 className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
                 Book Now
