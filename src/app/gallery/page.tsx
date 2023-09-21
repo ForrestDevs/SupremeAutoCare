@@ -1,4 +1,8 @@
 import Link from "next/link";
+import Carousel from "@/components/gallery/Carousel";
+
+const SLIDE_COUNT = 10;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function Gallery() {
   return (
@@ -18,17 +22,17 @@ export default function Gallery() {
         </video>
 
         <div className="z-2 absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-full text-center flex-col gap-2">
-          <div className="bg-slate-800/40 w-fit mx-auto">
-            <h1 className="text-white font-cin text-sh1 md:text-lh1 mx-8 uppercase">
-              Gallery
+          <div className="bg-slate-800/40 w-fit mx-auto p-4">
+            <h1 className="text-white text-sh1 md:text-lh1 mx-8 font-bold italic">
+              GALLERY
             </h1>
-            <h2 className="text-slate-300 font-cin text-sp1 md:text-lp1 mx-8">
-              Where you can browse through stunning images of the cars
-              we&apos;ve had the pleasure to detail
+            <h2 className="text-slate-300 text-sh4 md:text-lh4">
+              Welcome to our gallery page, where you can browse through stunning
+              images of the cars we&apos;ve had the pleasure to detail
             </h2>
           </div>
 
-          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
+          <div className="mt-16 btn">
             <Link href={"/services"}>
               <h2 className="text-black text-xl md:text-2xl font-medium ">
                 Book Now
@@ -38,13 +42,13 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className="flex w-full min-h-[75vh]">
-        <div className="flex flex-col items-center justify-evenly">
+      <section className="flex w-full min-h-[75vh] py-10 bg-black">
+        <div className="flex flex-col items-center w-full gap-4">
           <h2 className="text-white text-sh1 md:text-lh1 uppercase font-light border-b">
             OUR WORK
           </h2>
-          <div>
-            
+          <div className="w-full h-full p-6">
+            <Carousel slides={SLIDES} options={{}} />
           </div>
         </div>
       </section>

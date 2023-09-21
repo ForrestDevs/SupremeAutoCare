@@ -1,5 +1,5 @@
 import Image from "next/image";
-import nissan from "@/assets/images/nissan.webp";
+import nissan from "@/assets/images/home/nissan.webp";
 
 export default function Section2() {
   return (

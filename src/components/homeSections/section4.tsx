@@ -1,6 +1,6 @@
-import AnimatedContainer from "../AnimatedContainer";
+import AnimatedContainer from "../custom/AnimatedContainer";
 import Image from "next/image";
-import teslaParallax from "@/assets/images/teslaParallax.webp";
+import teslaParallax from "@/assets/images/home/teslaParallax.webp";
 
 export default function Section4() {
   return (

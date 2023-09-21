@@ -11,6 +11,8 @@ import paintCorrectionCoating from "@/assets/images/services/paintCorrection_Coa
 import rari from "@/assets/images/services/rari.webp";
 import showRoom from "@/assets/images/services/showRoom.webp";
 import standard from "@/assets/images/services/standard.webp";
+import Card from "@/components/services/Card";
+import ScrollLink from "@/components/custom/ScrollLink";
 
 export default function Services() {
   return (
@@ -25,24 +27,24 @@ export default function Services() {
 
         <div className="z-2 absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-full text-center flex-col gap-2">
           <div className="bg-slate-800/40 w-fit mx-auto">
-            <h1 className="text-white font-cin text-sh1 md:text-lh1 mx-8 uppercase">
-              BOOK YOUR DETAILING APPOINTMENT TODAY!
+            <h1 className="text-white text-sh1 md:text-lh1 mx-8 uppercase">
+              OUR SUPREME DETAILING SERVICES
             </h1>
-            <h2 className="text-slate-300 font-cin text-sp1 md:text-lp1 mx-8">
-              Experience Detailing That Goes Above and Beyond Your Expectations
+            <h2 className="text-slate-300 text-sp1 md:text-lp1 mx-8">
+              Book your detailing appointment today!
             </h2>
           </div>
-          <div className="mt-16 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-            <Link href={"/services"}>
+          <div className="mt-16 btn">
+            <a href="#services">
               <h2 className="text-black text-xl md:text-2xl font-medium ">
                 Book Now
               </h2>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="flex flex-col w-full bg-black">
+      <section id="services" className="flex flex-col w-full bg-black">
         <article className="border-l border-gray-500 m-16 h-full pb-8">
           <h2 className="text-white text-sh6 md:lh6 uppercase font-light pl-8 mb-4">
             Our Approach
@@ -57,80 +59,29 @@ export default function Services() {
         </article>
       </section>
 
-      <section className="w-full bg-black text-white mb-8">
+      <section className="w-full bg-gradient-to-br from-[#ED1C24] via-slate-500 to-[#d0141a] text-white py-10">
         <article className="flex flex-col gap-8 h-full mx-16">
           <div className="flex flex-col items-center justify-evenly gap-4">
             <h2 className="text-sh2 md:text-lh2 uppercase font-light border-b">
               Express Detailing
             </h2>
             <div className="flex flex-col items-center justify-center lg:flex-row gap-4">
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={lamboGray}
-                  alt="Gray Lamborghini"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      Detail Wash
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      45 Minutes
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $49.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={inOut}
-                  alt="Gray Lamborghini"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      In Out Express
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      1 1/2 Hour
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $99.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <Card
+                title="Detail Wash"
+                description="45 Minutes | From: $49.99"
+                bookNowLink=""
+                readMoreLink=""
+                imageSrc={lamboGray}
+                imageAlt="Gray Lamborghini"
+              />
+              <Card
+                title="In Out Express"
+                description="1 1/2 Hour | From: $99.99"
+                bookNowLink=""
+                readMoreLink=""
+                imageSrc={inOut}
+                imageAlt="BMW Interior"
+              />
             </div>
           </div>
 
@@ -138,283 +89,79 @@ export default function Services() {
             <h2 className="text-sh2 md:text-lh2 uppercase font-light border-b">
               Luxury Detailing
             </h2>
-            <div className="flex flex-col items-center justify-center lg:flex-row gap-4">
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={standard}
-                  alt="Gray Lamborghini"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      Standard Detail
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      4 Hour
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $199.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={mercedes}
-                  alt="Gray Lamborghini"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      Interior Detail
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      2 1/2 Hour
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $149.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={lamboWheel}
-                  alt="Gray Lamborghini"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      Supreme Detail
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      6 Hour
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $299.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={showRoom}
-                  alt="Ford RS interior"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      Showroom Detail
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      8 Hours
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $399.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            <div className="grid grid-flow-row lg:grid-cols-2 gap-4 items-center justify-center">
+              <Card
+                title="Standard Detail"
+                description="4 Hour | From: $199.99"
+                bookNowLink="/services"
+                readMoreLink=""
+                imageSrc={standard}
+                imageAlt="Gray Lamborghini"
+              />
+              <Card
+                title="Interior Detail"
+                description="2 1/2 Hour | From: $149.99"
+                bookNowLink="/services"
+                readMoreLink=""
+                imageSrc={mercedes}
+                imageAlt="Gray Lamborghini"
+              />
+              <Card
+                title="Supreme Detail"
+                description="6 Hour | From: $299.99"
+                bookNowLink="/services"
+                readMoreLink=""
+                imageSrc={lamboWheel}
+                imageAlt="Gray Lamborghini"
+              />
+              <Card
+                title="Showroom Detail"
+                description="8 Hours | From: $399.99"
+                bookNowLink="/services"
+                readMoreLink=""
+                imageSrc={showRoom}
+                imageAlt="Ford RS interior"
+              />
             </div>
           </div>
 
           <div className="flex flex-col items-center justify-evenly gap-4">
             <h2 className="text-sh2 md:text-lh2 uppercase font-light border-b">
-              Ceramic Coating + Correction
+              Ceramic Coating + Paint Correction
             </h2>
-            <div className="flex flex-col items-center justify-center lg:flex-row flex-wrap gap-4">
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={paintCorrectionCoating}
-                  alt="Black Rolls Royce"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      Ceramic Coating + Polish
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      12 Hours
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $1,299.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={rari}
-                  alt="Gray Lamborghini"
-                  className="Ferrari Logo"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      Ceramic Coating + Polish
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      8 Hours
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $999.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div> */}
-
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={rari}
-                  alt="Ferrari Logo"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">
-                      Ceramic Coating
-                    </h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      6 Hours
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $599.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col bg-gradient-to-r from-slate-500/30 to-slate-800/80 p-6 rounded-lg shadow-2xl w-fit border-2 border-white">
-                <Image
-                  src={paintCorrect}
-                  alt="Lamborghini Polish"
-                  className="rounded-lg flex-grow"
-                  priority
-                />
-                <div className="flex flex-col gap-2 text-white mt-6">
-                  <span className="flex flex-row items-center justify-between">
-                    <h3 className="text-sh3 md:text-lh3 uppercase">Polish</h3>
-                    <p className="underline">Read More</p>
-                  </span>
-
-                  <span className="flex flex-row items-center justify-between">
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      5 Hours
-                    </p>{" "}
-                    <p className="text-sp2 md:text-lp2 text-slate-200">
-                      From: $299.99
-                    </p>
-                  </span>
-
-                  <div className="mt-4 border border-slate-900 rounded-2xl hover:bg-slate-300 max-w-fit p-2 mx-auto bg-white">
-                    <Link href={"/services"}>
-                      <h2 className="text-black text-xl md:text-2xl font-medium ">
-                        Book Now
-                      </h2>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            <div className="grid grid-flow-row lg:grid-cols-2 gap-4 items-center justify-center">
+              <Card
+                title="Ceramic Coating + Paint Correction"
+                description="12 Hours | From: $1,299.99"
+                bookNowLink="/services"
+                readMoreLink=""
+                imageSrc={paintCorrectionCoating}
+                imageAlt="Black Rolls Royce"
+              />
+              <Card
+                title="Ceramic Coating + Polish"
+                description="8 Hours | From: $999.99"
+                bookNowLink="/services"
+                readMoreLink=""
+                imageSrc={rari}
+                imageAlt="Gray Lamborghini"
+              />
+              <Card
+                title="Ceramic Coating"
+                description="6 Hours | From: $599.99"
+                bookNowLink="/services"
+                readMoreLink=""
+                imageSrc={rari}
+                imageAlt="Ferrari Logo"
+              />
+              <Card
+                title="Polish"
+                description="5 Hours | From: $299.99"
+                bookNowLink="/services"
+                readMoreLink=""
+                imageSrc={paintCorrect}
+                imageAlt="Lamborghini Polish"
+              />
             </div>
           </div>
         </article>

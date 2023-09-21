@@ -1,7 +1,7 @@
 import Image from "next/image";
-import phantom from "@/assets/images/phantom.webp";
-import jeep from "@/assets/images/jeep.webp";
-import escalade from "@/assets/images/escalade.webp";
+import phantom from "@/assets/images/home/phantom.webp";
+import jeep from "@/assets/images/home/jeep.webp";
+import escalade from "@/assets/images/home/escalade.webp";
 
 export default function Section3() {
   return (

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import rolls from "@/assets/images/rolls.webp";
-import audi from "@/assets/images/audi.webp";
-import porsche from "@/assets/images/porsche.webp";
-import tesla from "@/assets/images/tesla.webp";
+import rolls from "@/assets/images/home/rolls.webp";
+import audi from "@/assets/images/home/audi.webp";
+import porsche from "@/assets/images/home/porsche.webp";
+import tesla from "@/assets/images/home/tesla.webp";
 
 export default function Section6() {
   return (
