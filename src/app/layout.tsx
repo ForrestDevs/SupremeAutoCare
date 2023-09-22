@@ -71,7 +71,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
-      <body className={Futura.className}>
+      <body className={`${Futura.className} h-screen`}>
         <header className="w-full backdrop-filter backdrop-blur-sm bg-slate-600/10 fixed top-0 right-0 z-50">
           <div className="max-w-7xl mx-auto">
             <div className="flex max-w-screen-xl mx-auto items-center justify-between px-8">
@@ -115,7 +115,8 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <footer className="flex flex-col relative items-center lg:flex-row justify-evenly gap-4 p-6 bg-black text-white">
+        {/* <footer className="flex flex-col relative items-center lg:flex-row justify-evenly gap-4 p-6 bg-black text-white"> */}
+        <footer className="flex flex-col lg:flex-row items-center justify-evenly gap-4 p-6 bg-black text-white bottom-0 w-full">
           <div className="h-full order-1 lg:order-none ">
             <Image
               src={Logo}

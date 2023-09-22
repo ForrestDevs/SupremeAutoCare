@@ -32,7 +32,7 @@ export default function Section1() {
             </h2>
           </div>
 
-          <div className="mt-16 btn">
+          <div data-theme="light" className="mt-16 btn">
             <Link href={"/services"}>
               <h2 className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
                 Book Now

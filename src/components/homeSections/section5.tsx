@@ -16,7 +16,7 @@ export default function Section5() {
         </video>
       </div>
 
-      <div className="flex flex-col justify-center w-full md:w-1/2 order-1 md:order-none px-20 py-4">
+      <div data-theme="light" className="flex flex-col justify-center w-full md:w-1/2 order-1 md:order-none px-20 py-4 text-black">
         <h3 className="text-sh3 md:text-lh3 text-left my-4">
           Abbos Detailing In Numbers
         </h3>
@@ -24,28 +24,28 @@ export default function Section5() {
         <div className="grid gap-x-16 gap-y-8 grid-cols-2">
           <span className="flex flex-col items-start justify-evenly">
             <p className="text-sh2 md:text-lh2 font-light">8+</p>
-            <p className="text-sp2 md:text-lp2 font-medium w-full uppercase pt-6">
-              Experience
+            <p className="text-sp3 md:text-lp3 font-medium w-full uppercase pt-6 border-t">
+              Years
             </p>
           </span>
 
-          <span className="flex flex-col items-start justify-evenly">
-            <p className="text-sh2 md:text-lh2 font-light ">100$+</p>
-            <p className="text-sp2 md:text-lp2 font-medium  w-full uppercase pt-6 ">
+          <span className="flex flex-col items-start justify-evenly whitespace-nowrap">
+            <p className="text-sh2 md:text-lh2 font-light">49$+</p>
+            <p className="text-sp3 md:text-lp3 font-medium  w-full uppercase pt-6 border-t">
               Cost Per Service
             </p>
           </span>
 
           <span className="flex flex-col items-start justify-evenly">
-            <p className="text-sh2 md:text-lh2 font-light">500+</p>
-            <p className="text-sp2 md:text-lp2 font-medium w-full uppercase pt-6 ">
+            <p className="text-sh2 md:text-lh2 font-light">1000+</p>
+            <p className="text-sp3 md:text-lp3 font-medium w-full uppercase pt-6 border-t">
               Customers
             </p>
           </span>
 
-          <span className="flex flex-col items-start justify-evenly">
+          <span className="flex flex-col items-start justify-evenly whitespace-nowrap">
             <p className="text-sh2 md:text-lh2 font-light  ">100%</p>
-            <p className="text-sp2 md:text-lp2 font-medium w-full uppercase pt-6 ">
+            <p className="text-sp3 md:text-lp3 font-medium w-full uppercase pt-6 border-t">
               Returning Customers
             </p>
           </span>

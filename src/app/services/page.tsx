@@ -1,7 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
 import hero from "@/assets/images/redLambo.webp";
-
 import inOut from "@/assets/images/services/inOut.webp";
 import lamboGray from "@/assets/images/services/lamboGray.webp";
 import lamboWheel from "@/assets/images/services/lamboWheel.webp";
@@ -11,8 +9,7 @@ import paintCorrectionCoating from "@/assets/images/services/paintCorrection_Coa
 import rari from "@/assets/images/services/rari.webp";
 import showRoom from "@/assets/images/services/showRoom.webp";
 import standard from "@/assets/images/services/standard.webp";
-import Card from "@/components/services/Card";
-import ScrollLink from "@/components/custom/ScrollLink";
+import ServiceCard from "@/components/services/ServiceCard";
 
 export default function Services() {
   return (
@@ -34,7 +31,7 @@ export default function Services() {
               Book your detailing appointment today!
             </h2>
           </div>
-          <div className="mt-16 btn">
+          <div data-theme="light" className="mt-16 btn">
             <a href="#services">
               <h2 className="text-black text-xl md:text-2xl font-medium ">
                 Book Now
@@ -44,7 +41,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section id="services" className="flex flex-col w-full bg-black">
+      <section className="flex flex-col w-full bg-black">
         <article className="border-l border-gray-500 m-16 h-full pb-8">
           <h2 className="text-white text-sh6 md:lh6 uppercase font-light pl-8 mb-4">
             Our Approach
@@ -59,66 +56,66 @@ export default function Services() {
         </article>
       </section>
 
-      <section className="w-full bg-gradient-to-br from-[#ED1C24] via-slate-500 to-[#d0141a] text-white py-10">
+      <section id="services" className="w-full bg-white text-black py-10">
         <article className="flex flex-col gap-8 h-full mx-16">
-          <div className="flex flex-col items-center justify-evenly gap-4">
+          <div className="flex flex-col items-center justify-evenly gap-8">
             <h2 className="text-sh2 md:text-lh2 uppercase font-light border-b">
               Express Detailing
             </h2>
-            <div className="flex flex-col items-center justify-center lg:flex-row gap-4">
-              <Card
+            <div className="flex flex-col items-center justify-center lg:flex-row gap-8">
+              <ServiceCard
                 title="Detail Wash"
-                description="45 Minutes | From: $49.99"
-                bookNowLink=""
-                readMoreLink=""
+                time="45 Minutes"
+                price="$49.99"
+                callLink="detail-wash"
                 imageSrc={lamboGray}
                 imageAlt="Gray Lamborghini"
               />
-              <Card
+              <ServiceCard
                 title="In Out Express"
-                description="1 1/2 Hour | From: $99.99"
-                bookNowLink=""
-                readMoreLink=""
+                time="1 1/2 Hour"
+                price="$99.99"
+                callLink="in-out-express"
                 imageSrc={inOut}
                 imageAlt="BMW Interior"
               />
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-evenly gap-4">
+          <div className="flex flex-col items-center justify-evenly gap-8">
             <h2 className="text-sh2 md:text-lh2 uppercase font-light border-b">
               Luxury Detailing
             </h2>
-            <div className="grid grid-flow-row lg:grid-cols-2 gap-4 items-center justify-center">
-              <Card
+            <div className="grid grid-flow-row lg:grid-cols-2 gap-8 items-center justify-center">
+              <ServiceCard
                 title="Standard Detail"
-                description="4 Hour | From: $199.99"
-                bookNowLink="/services"
-                readMoreLink=""
+                time="4 Hour"
+                price="$199.99"
+                callLink="standard-detail"
                 imageSrc={standard}
                 imageAlt="Gray Lamborghini"
               />
-              <Card
+              <ServiceCard
                 title="Interior Detail"
-                description="2 1/2 Hour | From: $149.99"
-                bookNowLink="/services"
-                readMoreLink=""
+                time="2 1/2 Hour"
+                price="$149.99"
+                callLink="interior-detail"
                 imageSrc={mercedes}
                 imageAlt="Gray Lamborghini"
               />
-              <Card
+              <ServiceCard
                 title="Supreme Detail"
-                description="6 Hour | From: $299.99"
-                bookNowLink="/services"
-                readMoreLink=""
+                time="6 Hour"
+                price="$299.99"
+                callLink="supreme-detail"
                 imageSrc={lamboWheel}
                 imageAlt="Gray Lamborghini"
               />
-              <Card
+              <ServiceCard
                 title="Showroom Detail"
-                description="8 Hours | From: $399.99"
-                bookNowLink="/services"
-                readMoreLink=""
+                time="8 Hours"
+                price="$399.99"
+                callLink="showroom-detail"
                 imageSrc={showRoom}
                 imageAlt="Ford RS interior"
               />
@@ -129,36 +126,36 @@ export default function Services() {
             <h2 className="text-sh2 md:text-lh2 uppercase font-light border-b">
               Ceramic Coating + Paint Correction
             </h2>
-            <div className="grid grid-flow-row lg:grid-cols-2 gap-4 items-center justify-center">
-              <Card
+            <div className="grid grid-flow-row lg:grid-cols-2 gap-8 items-center justify-center">
+              <ServiceCard
                 title="Ceramic Coating + Paint Correction"
-                description="12 Hours | From: $1,299.99"
-                bookNowLink="/services"
-                readMoreLink=""
+                time="12 Hours"
+                price="$1,299.99"
+                callLink="ceramic-coating-paint-correction"
                 imageSrc={paintCorrectionCoating}
                 imageAlt="Black Rolls Royce"
               />
-              <Card
+              <ServiceCard
                 title="Ceramic Coating + Polish"
-                description="8 Hours | From: $999.99"
-                bookNowLink="/services"
-                readMoreLink=""
+                time="8 Hours"
+                price="$999.99"
+                callLink="ceramic-coating-polish"
                 imageSrc={rari}
                 imageAlt="Gray Lamborghini"
               />
-              <Card
+              <ServiceCard
                 title="Ceramic Coating"
-                description="6 Hours | From: $599.99"
-                bookNowLink="/services"
-                readMoreLink=""
+                time="6 Hours"
+                price="$599.99"
+                callLink="ceramic-coating"
                 imageSrc={rari}
                 imageAlt="Ferrari Logo"
               />
-              <Card
+              <ServiceCard
                 title="Polish"
-                description="5 Hours | From: $299.99"
-                bookNowLink="/services"
-                readMoreLink=""
+                time="5 Hours"
+                price="$299.99"
+                callLink="polish"
                 imageSrc={paintCorrect}
                 imageAlt="Lamborghini Polish"
               />
