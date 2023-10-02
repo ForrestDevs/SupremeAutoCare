@@ -1,15 +1,10 @@
 import Image from "next/image";
-import hero from "@/assets/images/redLambo.webp";
-import inOut from "@/assets/images/services/inOut.webp";
-import lamboGray from "@/assets/images/services/lamboGray.webp";
 import lamboWheel from "@/assets/images/services/lamboWheel.webp";
-import mercedes from "@/assets/images/services/mercedes.webp";
-import paintCorrect from "@/assets/images/services/paintCorrect.webp";
-import paintCorrectionCoating from "@/assets/images/services/paintCorrection_Coating.webp";
-import rari from "@/assets/images/services/rari.webp";
 import showRoom from "@/assets/images/services/showRoom.webp";
-import standard from "@/assets/images/services/standard.webp";
 import ServiceCard from "@/components/services/ServiceCard";
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata = generateMetadata('Supreme Auto Care | Services', 'Book your detailing appointment today!');
 
 export default function Services() {
   return (

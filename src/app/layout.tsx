@@ -60,10 +60,10 @@ const font = Playfair_Display({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Supreme Auto Care",
-  description: "Detailing and Ceramic Coating in Scarborough, Ontario",
-};
+// export const metadata: Metadata = {
+//   title: "Supreme Auto Care",
+//   description: "Detailing and Ceramic Coating in Scarborough, Ontario",
+// };
 
 export default function RootLayout({
   children,
@@ -165,6 +165,7 @@ export default function RootLayout({
             <p className="text-lp2 mb-6">
               Sign up to recive promotional updates
             </p>
+
             <form className="w-full max-w-sm">
               <div className="flex items-center py-2 ">
                 <input

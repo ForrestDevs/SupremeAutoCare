@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Carousel from "@/components/gallery/Carousel";
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata = generateMetadata('Supreme Auto Care | Gallery', 'Welcome to our gallery page, where you can browse through stunning images of the cars we have had the pleasure to detail');
 
 const SLIDE_COUNT = 26;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
