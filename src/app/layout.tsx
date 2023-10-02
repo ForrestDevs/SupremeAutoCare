@@ -7,6 +7,7 @@ import Image from "next/image";
 import Logo from "@/assets/logo/logoTransparent.png";
 import { Facebook, Instagram } from "lucide-react";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 
 // Font files can be colocated inside of `app`
 const Futura = localFont({
@@ -115,7 +116,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        {/* <footer className="flex flex-col relative items-center lg:flex-row justify-evenly gap-4 p-6 bg-black text-white"> */}
+        <Analytics />
         <footer className="flex flex-col lg:flex-row items-center justify-evenly gap-4 p-6 bg-black text-white bottom-0 w-full">
           <div className="h-full order-1 lg:order-none ">
             <Image
