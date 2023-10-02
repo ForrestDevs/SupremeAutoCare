@@ -11,6 +11,7 @@ import {
 
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
+import { ScrollArea } from "../custom/ScrollArea";
 
 interface BookingFormProps {
   calLink: string;
@@ -35,11 +36,13 @@ export default function BookingForm({ calLink }: BookingFormProps) {
       </DialogTrigger>
       <DialogContent>
         <div className="m-4">
-          <Cal
-            calLink={`supremedetailing/${calLink}`}
-            style={{ width: "100%", height: "100%", overflow: "scroll" }}
-            config={{ layout: "month_view" }}
-          />
+          <ScrollArea>
+            <Cal
+              calLink={`supremedetailing/${calLink}`}
+              style={{ width: "100%", height: "100%", overflow: "scroll" }}
+              config={{ layout: "month_view" }}
+            />
+          </ScrollArea>
         </div>
       </DialogContent>
     </Dialog>
