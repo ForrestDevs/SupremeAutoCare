@@ -25,9 +25,11 @@ export default function ServiceCard({ ...props }: CardProps) {
         />
       </figure>
       <div className="card-body">
-        <h2 className="text-sh3 md:text-lh3 uppercase font-bold">{props.title}</h2>
+        <h2 className="text-sh3 md:text-lh3 uppercase font-bold">
+          {props.title}
+        </h2>
         <div className="flex flex-row items-center gap-2 text-slate-600">
-          <Hourglass size={18}  />
+          <Hourglass size={18} />
           <p className="uppercase">{props.time}</p>
         </div>
 
@@ -36,9 +38,10 @@ export default function ServiceCard({ ...props }: CardProps) {
           <p className="uppercase">Starting: {props.price}</p>
         </div>
 
-       
         <div className="card-actions justify-end">
-          <BookingForm calLink={props.callLink} />
+          <Link href={`services/${props.callLink}`}>
+            <p className="btn">Book Now</p>
+          </Link>
         </div>
       </div>
     </div>
