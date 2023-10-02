@@ -8,6 +8,7 @@ import Logo from "@/assets/logo/logoTransparent.png";
 import { Facebook, Instagram } from "lucide-react";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
+import EmailForm from "@/components/EmailForm";
 
 // Font files can be colocated inside of `app`
 const Futura = localFont({
@@ -72,6 +73,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <head />
       <body className={`${Futura.className} h-screen`}>
         <header className="w-full backdrop-filter backdrop-blur-sm bg-slate-600/10 fixed top-0 right-0 z-50">
           <div className="max-w-7xl mx-auto">
@@ -160,29 +162,14 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="flex flex-col sm:items-center lg:items-start h-full order-2 lg:order-none w-full lg:w-auto">
+          {/* <div className="flex flex-col sm:items-center lg:items-start h-full order-2 lg:order-none w-full lg:w-auto">
             <h4 className="text-lp2 uppercase font-semibold mb-6">Subscribe</h4>
             <p className="text-lp2 mb-6">
               Sign up to recive promotional updates
             </p>
 
-            <form className="w-full max-w-sm">
-              <div className="flex items-center py-2 ">
-                <input
-                  className="rounded-lg border border-black w-full text-gray-700 mr-3 py-2 px-2 leading-tight focus:outline-none"
-                  type="email"
-                  placeholder="Email"
-                  aria-label="Email"
-                />
-                <button
-                  className="flex-shrink-0 bg-white hover:bg-slate-300 border border-black text-sm text-black py-2 px-2 rounded-lg"
-                  type="button"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
-          </div>
+            <EmailForm />
+          </div> */}
         </footer>
         <TailwindIndicator />
       </body>

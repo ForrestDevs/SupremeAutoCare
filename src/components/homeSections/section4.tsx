@@ -1,4 +1,3 @@
-import AnimatedContainer from "../custom/AnimatedContainer";
 import Image from "next/image";
 import teslaParallax from "@/assets/images/home/teslaParallax.webp";
 

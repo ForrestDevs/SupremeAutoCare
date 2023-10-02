@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import BookingForm from "./BookingForm";
-import { CircleDollarSignIcon, Clock, Hourglass } from "lucide-react";
+import { CircleDollarSignIcon, Hourglass } from "lucide-react";
 
 interface CardProps {
   title: string;

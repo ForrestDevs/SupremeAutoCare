@@ -29,9 +29,9 @@ export default function Section6() {
         </div>
       </article>
 
-      <div className="w-full lg:w-1/2 grid gap-16 grid-cols-2 m-16 pr-24 h-full lg:h-auto items-center lg:items-start">
+      <div className="w-full lg:w-1/2 grid gap-16 grid-cols-2 my-10 mx-auto pr-24 h-full lg:h-auto items-center lg:items-start">
         <div className="flex flex-col items-center m-4 w-full h-full ">
-          <Image src={tesla} alt="Tesla Logo" priority className="w-24 h-24" />
+          <Image src={tesla} alt="Tesla Logo" priority width={100} height={100} />
           <h4 className="text-white text-center uppercase mt-2 text-lg">
             TESLA
           </h4>
@@ -42,7 +42,7 @@ export default function Section6() {
             src={porsche}
             alt="Porsche Logo"
             priority
-            className="w-24 h-24"
+            width={75} height={75}
           />
           <h4 className="text-white text-center uppercase mt-2 text-lg">
             Porsche
@@ -54,7 +54,7 @@ export default function Section6() {
             src={rolls}
             alt="Rolls Royce Logo"
             priority
-            className="w-24 h-24"
+            width={100} height={100}
           />
           <h4 className="text-white text-center uppercase mt-2 text-lg">
             Rolls Royce
@@ -62,7 +62,7 @@ export default function Section6() {
         </div>
 
         <div className="flex flex-col items-center m-4 w-full h-full">
-          <Image src={audi} alt="Audi Logo" priority className="w-24 h-24" />
+          <Image src={audi} alt="Audi Logo" priority width={100} height={100} />
           <h4 className="text-white text-center uppercase mt-2 text-lg">
             Audi
           </h4>

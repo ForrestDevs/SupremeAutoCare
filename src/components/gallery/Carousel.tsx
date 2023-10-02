@@ -2,10 +2,8 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-// import imageByIndex from "./imageByIndex";
 import { imagePublicByIndex } from "./imageByIndex";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import Image from "next/image";
 
 type ThumbProps = {
   selected: boolean;
