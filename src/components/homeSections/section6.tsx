@@ -18,7 +18,7 @@ export default function Section6() {
           </h4>
 
           <p className="text-white text-sp2 md:text-lp2 pl-8">
-            At Abbos Detailing, we specialize in providing expert detailing
+            At Supreme Auto Care, we specialize in providing expert detailing
             services for high-end automobiles. We understand the importance of
             maintaining your investment, regardless of the make or model. With
             our extensive knowledge and experience, we are equipped to handle

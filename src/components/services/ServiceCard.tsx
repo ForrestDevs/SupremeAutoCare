@@ -40,7 +40,7 @@ export default function ServiceCard({ ...props }: CardProps) {
 
         <div className="card-actions justify-end">
           <Link href={`services/${props.callLink}`}>
-            <p className="btn">Book Now</p>
+            <p data-theme="light" className="btn">Book Now</p>
           </Link>
         </div>
       </div>

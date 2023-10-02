@@ -2,9 +2,12 @@ import Image from "next/image";
 import lamboWheel from "@/assets/images/services/lamboWheel.webp";
 import showRoom from "@/assets/images/services/showRoom.webp";
 import ServiceCard from "@/components/services/ServiceCard";
-import { generateMetadata } from '@/lib/metadata';
+import { generateMetadata } from "@/lib/metadata";
 
-export const metadata = generateMetadata('Supreme Auto Care | Services', 'Book your detailing appointment today!');
+export const metadata = generateMetadata(
+  "Supreme Auto Care | Services",
+  "Book your detailing appointment today!"
+);
 
 export default function Services() {
   return (
@@ -30,9 +33,9 @@ export default function Services() {
           </div>
           <div data-theme="light" className="mt-16 btn">
             <a href="#services">
-              <h2 className="text-black text-xl md:text-2xl font-medium ">
+              <p className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
                 Book Now
-              </h2>
+              </p>
             </a>
           </div>
         </div>

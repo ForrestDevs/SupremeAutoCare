@@ -20,23 +20,23 @@ export default function Section1() {
         <div className="flex-col text-center absolute w-full top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
           <div className="w-fit mx-auto bg-slate-800/30 ">
             <div className="flex flex-col">
-              <h1 className="text-white text-sh1 md:text-lh1 mx-8 font-bold italic">
+              <p className="text-white text-sh1 md:text-lh1 mx-8 font-bold italic">
                 UNMATHCED QUALITY,
-              </h1>
-              <h1 className="text-[#ED1C24] text-sh1 md:text-lh1 mx-8 font-bold italic">
+              </p>
+              <p className="text-[#ED1C24] text-sh1 md:text-lh1 mx-8 font-bold italic">
                 UNFORGETTABLE SHINE
-              </h1>
+              </p>
             </div>
-            <h2 className="text-white text-sh4 md:text-lh4 px-6">
+            <h1 className="text-white text-sh4 md:text-lh4 px-6">
               Experience Detailing That Goes Above And Beyond Your Expectations
-            </h2>
+            </h1>
           </div>
 
           <div data-theme="light" className="mt-16 btn">
             <Link href={"/services"}>
-              <h2 className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
+              <p className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
                 Book Now
-              </h2>
+              </p>
             </Link>
           </div>
         </div>

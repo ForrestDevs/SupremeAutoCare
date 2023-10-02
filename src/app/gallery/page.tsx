@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Carousel from "@/components/gallery/Carousel";
-import { generateMetadata } from '@/lib/metadata';
+import { generateMetadata } from "@/lib/metadata";
 
-export const metadata = generateMetadata('Supreme Auto Care | Gallery', 'Welcome to our gallery page, where you can browse through stunning images of the cars we have had the pleasure to detail');
+export const metadata = generateMetadata(
+  "Supreme Auto Care | Gallery",
+  "Welcome to our gallery page, where you can browse through stunning images of the cars we have had the pleasure to detail"
+);
 
 const SLIDE_COUNT = 26;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
@@ -37,9 +40,9 @@ export default function Gallery() {
 
           <div data-theme="light" className="mt-16 btn">
             <Link href={"/services"}>
-              <h2 className="text-black text-xl md:text-2xl font-medium ">
+              <p className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
                 Book Now
-              </h2>
+              </p>
             </Link>
           </div>
         </div>

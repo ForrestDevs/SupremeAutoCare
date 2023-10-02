@@ -8,12 +8,12 @@ export default function Section3() {
     <section className="flex flex-col relative w-full bg-white text-black">
       <div className="border-l border-gray-600 my-8 pb-8 ml-16">
         <div className="w-1/3 ">
-          <h3 className="uppercase text-sh6 md:text-lh6 pl-8 mb-4">
+          <p className="uppercase text-sh6 md:text-lh6 pl-8 mb-4">
             Services
-          </h3>
-          <h4 className="text-sp1 md:text-lp1 border-l-2 border-gray-600 pl-8">
+          </p>
+          <p className="text-sp1 md:text-lp1 border-l-2 border-gray-600 pl-8">
             Going Above and Beyond for Your Vehicle
-          </h4>
+          </p>
         </div>
       </div>
 
@@ -21,17 +21,17 @@ export default function Section3() {
         <div className="flex flex-col md:flex-row justify-center">
           <article className="flex items-center w-full md:w-1/2 order-1 md:order-none">
             <div className="m-12">
-              <h3 className="text-sh2 md:text-lh2">
+              <h1 className="text-sh2 md:text-lh2">
                 Interior Detail and Exterior Wash
-              </h3>
-              <p className="text-sp2 md:text-lp2">
+              </h1>
+              <h1 className="text-sp2 md:text-lp2">
                 Our team uses a combination of steam, shampooing, and vacuuming
                 to clean and freshen up all surfaces, including the seats and
                 floors. We also remove mild salt stains, wash the mats and door
                 jams, and clean the inside windows. This package includes a dual
                 bucket hand wash, ceramic wax treatment, and tire shine to
                 protect the paint and restore your wheels to their former glory.
-              </p>
+              </h1>
             </div>
           </article>
 
@@ -57,8 +57,8 @@ export default function Section3() {
 
           <article className="flex items-center w-full md:w-1/2 order-1 md:order-none">
             <div className="m-12">
-              <h3 className="text-sh2 md:text-lh2">Correction</h3>
-              <p className="text-sp2 md:text-lp2">
+              <h1 className="text-sh2 md:text-lh2">Correction</h1>
+              <h1 className="text-sp2 md:text-lp2">
                 We offer two stages of paint correction to restore the showroom
                 shine to your vehicle. Our Stage 1 package removes moderate
                 swirling and includes protection to make the paint last. This
@@ -69,7 +69,7 @@ export default function Section3() {
                 1 polish, ceramic wax treatment, and tire shine. Trust our
                 experts to provide your car with the highest level of care and
                 attention to detail.
-              </p>
+              </h1>
             </div>
           </article>
         </div>
@@ -77,10 +77,10 @@ export default function Section3() {
         <div className="flex flex-col md:flex-row justify-center">
           <article className="flex items-center w-full md:w-1/2 order-1 md:order-none">
             <div className="m-12">
-              <h3 className="text-sh2 md:text-lh2">
+              <h1 className="text-sh2 md:text-lh2">
                 Ceramic Coating
-              </h3>
-              <p className="text-sp2 md:text-lp2">
+              </h1>
+              <h1 className="text-sp2 md:text-lp2">
                 Our ceramic coating packages provide the ultimate protection for
                 your luxury vehicle. Our team of experts uses only the highest
                 quality products and techniques to ensure a flawless finish.
@@ -89,7 +89,7 @@ export default function Section3() {
                 a ceramic coating from Abbos Detailing, you can rest assured
                 that your vehicle will maintain its showroom shine for years to
                 come.
-              </p>
+              </h1>
             </div>
           </article>
 

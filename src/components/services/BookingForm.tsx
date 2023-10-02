@@ -30,7 +30,7 @@ export default function BookingForm({ link }: BookingFormProps) {
   }, []);
 
   return (
-    <div className="p-16 w-full">
+    <div className="p-16 w-full h-full">
       <Cal
         calLink={`supremedetailing/${link}`}
         style={{ width: "100%", height: "100%", overflow: "scroll", margin: 0 }}

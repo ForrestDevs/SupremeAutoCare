@@ -6,12 +6,12 @@ export const generateMetadata = (
     title,
     description,
     url: "https://www.supremeautocare.ca/",
-    image: "/favicon.ico",
-    twitter: "https://twitter.com/gooseapp.farm",
+    image: "/icon.png",
     email: "abbosdetailing@gmail.com",
   };
 
   return {
+    
     metadataBase: new URL(metadataConfig.url),
     robots: "follow, index",
     title: metadataConfig.title,
@@ -27,7 +27,6 @@ export const generateMetadata = (
     twitter: {
       title: metadataConfig.title,
       description: metadataConfig.description,
-      site: metadataConfig.twitter,
       images: [
         { url: metadataConfig.image, width: 256, height: 256, alt: "favicon" },
       ],
