@@ -29,7 +29,7 @@ export default function Section6() {
         </div>
       </article>
 
-      <div className="w-full lg:w-1/2 grid gap-16 grid-cols-2 my-10 mx-auto pr-24 h-full lg:h-auto items-center lg:items-start">
+      <div className="w-full lg:w-1/2 grid gap-16 grid-cols-2 py-10 mx-auto pr-24 h-full lg:h-auto items-center lg:items-start">
         <div className="flex flex-col items-center m-4 w-full h-full ">
           <Image src={tesla} alt="Tesla Logo" priority width={100} height={100} />
           <h4 className="text-white text-center uppercase mt-2 text-lg">
