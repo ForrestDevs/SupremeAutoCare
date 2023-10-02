@@ -2,13 +2,14 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import imageByIndex from "./imageByIndex";
+// import imageByIndex from "./imageByIndex";
+import { imagePublicByIndex } from "./imageByIndex";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type ThumbProps = {
   selected: boolean;
-  imgSrc: StaticImageData;
+  imgSrc: string;
   index: number;
   onClick: () => void;
 };
@@ -29,7 +30,9 @@ export const Thumb: React.FC<ThumbProps> = (props) => {
           className={`h-full object-cover transition-opacity duration-200 transform scale-[90%] ${
             selected ? "opacity-100" : "opacity-20"
           }`}
-          src={imageByIndex(index)}
+          width={400}
+          height={400}
+          src={imgSrc}
           alt="Your alt text"
           priority
         />
@@ -81,8 +84,10 @@ const Carousel: React.FC<PropType> = (props) => {
             <div className="pl-2 min-w-full max-h-[50vh]" key={index}>
               <div className="overflow-hidden h-full">
                 <Image
-                  className="h-full object-cover m-auto"
-                  src={imageByIndex(index)}
+                  width={600}
+                  height={500}
+                  className="m-auto"
+                  src={imagePublicByIndex(index)}
                   alt="Your alt text"
                   priority
                 />
@@ -99,7 +104,7 @@ const Carousel: React.FC<PropType> = (props) => {
                 onClick={() => onThumbClick(index)}
                 selected={index === selectedIndex}
                 index={index}
-                imgSrc={imageByIndex(index)}
+                imgSrc={imagePublicByIndex(index)}
                 key={index}
               />
             ))}

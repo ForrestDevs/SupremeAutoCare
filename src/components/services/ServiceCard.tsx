@@ -14,13 +14,13 @@ interface CardProps {
 
 export default function ServiceCard({ ...props }: CardProps) {
   return (
-    <div className="card w-auto shadow-2xl rounded-xl">
-      <figure>
+    <div className="card w-full shadow-2xl rounded-xl">
+      <figure className="h-auto max-h-72 w-auto max-w-72">
         <Image
           src={props.imageSrc}
           alt={props.imageAlt}
-          width={450}
-          height={450}
+          width={400}
+          height={400}
           priority
         />
       </figure>
