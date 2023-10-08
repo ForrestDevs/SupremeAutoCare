@@ -21,7 +21,7 @@ export default function Section1() {
           <div className="w-fit mx-auto bg-slate-800/30 ">
             <div className="flex flex-col">
               <p className="text-white text-sh1 md:text-lh1 mx-8 font-bold italic">
-                UNMATHCED QUALITY,
+                UNMATCHED QUALITY,
               </p>
               <p className="text-[#ED1C24] text-sh1 md:text-lh1 mx-8 font-bold italic">
                 UNFORGETTABLE SHINE
