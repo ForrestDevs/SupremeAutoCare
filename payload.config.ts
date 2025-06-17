@@ -2,6 +2,7 @@ import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
+// import { betterAuthPlugin } from 'payload-auth/better-auth/plugin'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -44,6 +45,14 @@ export default buildConfig({
       },
       token: process.env.BLOB_READ_WRITE_TOKEN || '',
     }),
+    // TODO: Add better-auth plugin once ES module issues are resolved
+    // betterAuthPlugin({
+    //   secret: process.env.AUTH_SECRET || '',
+    //   database: {
+    //     type: 'postgres',
+    //     connectionString: process.env.DATABASE_URL || '',
+    //   },
+    // }),
   ],
   cors: [
     process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
