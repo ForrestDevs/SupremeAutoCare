@@ -66,7 +66,7 @@ export default function Services() {
                 title="Full Detail"
                 time="6 Hour"
                 price="$250"
-                callLink="supreme-detail"
+                callLink="full-detail"
                 imageSrc={lamboWheel}
                 imageAlt="Gray Lamborghini"
               />
@@ -82,7 +82,7 @@ export default function Services() {
                 title="Express Detail"
                 time="1 1/2 Hour"
                 price="$80"
-                callLink="in-out-express"
+                callLink="express-detail"
                 imageSrc={"/gallery/IMG_2244.jpg"}
                 imageAlt="BMW Interior"
               />
@@ -90,7 +90,7 @@ export default function Services() {
                 title="Wash"
                 time="45 Minutes"
                 price="$40"
-                callLink="detail-wash"
+                callLink="wash"
                 imageSrc={"/gallery/IMG_2173.jpg"}
                 imageAlt="Gray Lamborghini"
               />
