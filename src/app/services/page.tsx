@@ -1,6 +1,5 @@
 import Image from "next/image";
 import lamboWheel from "@/assets/images/services/lamboWheel.webp";
-import showRoom from "@/assets/images/services/showRoom.webp";
 import ServiceCard from "@/components/services/ServiceCard";
 import { generateMetadata } from "@/lib/metadata";
 
@@ -60,64 +59,40 @@ export default function Services() {
         <article className="flex flex-col gap-8 h-full mx-16">
           <div className="flex flex-col items-center justify-evenly gap-8">
             <h2 className="text-sh2 md:text-lh2 uppercase font-light border-b">
-              Express Detailing
+              Detailing Services
             </h2>
             <div className="grid grid-flow-row lg:grid-cols-2 gap-8 items-center justify-center">
               <ServiceCard
-                title="Detail Wash"
-                time="45 Minutes"
-                price="$49.99"
-                callLink="detail-wash"
-                imageSrc={"/gallery/IMG_2173.jpg"}
+                title="Full Detail"
+                time="6 Hour"
+                price="$250"
+                callLink="full-detail"
+                imageSrc={lamboWheel}
                 imageAlt="Gray Lamborghini"
               />
               <ServiceCard
-                title="In Out Express"
-                time="1 1/2 Hour"
-                price="$99.99"
-                callLink="in-out-express"
-                imageSrc={"/gallery/IMG_2244.jpg"}
-                imageAlt="BMW Interior"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center justify-evenly gap-8">
-            <h2 className="text-sh2 md:text-lh2 uppercase font-light border-b">
-              Luxury Detailing
-            </h2>
-            <div className="grid grid-flow-row lg:grid-cols-2 gap-8 items-center justify-center">
-              <ServiceCard
                 title="Standard Detail"
                 time="4 Hour"
-                price="$199.99"
+                price="$150"
                 callLink="standard-detail"
                 imageSrc={"/gallery/gt2.webp"}
                 imageAlt="GT2 RS"
               />
               <ServiceCard
-                title="Interior Detail"
-                time="2 1/2 Hour"
-                price="$149.99"
-                callLink="interior-detail"
-                imageSrc={"/gallery/porscheInterior.webp"}
-                imageAlt="Red Range Rover"
+                title="Express Detail"
+                time="1 1/2 Hour"
+                price="$80"
+                callLink="express-detail"
+                imageSrc={"/gallery/IMG_2244.jpg"}
+                imageAlt="BMW Interior"
               />
               <ServiceCard
-                title="Supreme Detail"
-                time="6 Hour"
-                price="$299.99"
-                callLink="supreme-detail"
-                imageSrc={lamboWheel}
+                title="Wash"
+                time="45 Minutes"
+                price="$40"
+                callLink="wash"
+                imageSrc={"/gallery/IMG_2173.jpg"}
                 imageAlt="Gray Lamborghini"
-              />
-              <ServiceCard
-                title="Showroom Detail"
-                time="8 Hours"
-                price="$399.99"
-                callLink="showroom-detail"
-                imageSrc={showRoom}
-                imageAlt="Ford RS interior"
               />
             </div>
           </div>
