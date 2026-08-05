@@ -14,42 +14,42 @@ import EmailForm from "@/components/EmailForm";
 const Futura = localFont({
   src: [
     {
-      path: "../../public/fonts/Supreme/FuturaBold.ttf",
+      path: "../../../public/fonts/Supreme/FuturaBold.ttf",
       weight: "700",
       style: "bold",
     },
     {
-      path: "../../public/fonts/Supreme/FuturaBoldItalic.ttf",
+      path: "../../../public/fonts/Supreme/FuturaBoldItalic.ttf",
       weight: "700",
       style: "bold italic",
     },
     {
-      path: "../../public/fonts/Supreme/FuturaBook.ttf",
+      path: "../../../public/fonts/Supreme/FuturaBook.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Supreme/FuturaCondensed.ttf",
+      path: "../../../public/fonts/Supreme/FuturaCondensed.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Supreme/FuturaHeavy.ttf",
+      path: "../../../public/fonts/Supreme/FuturaHeavy.ttf",
       weight: "900",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Supreme/FuturaHeavyOblique.ttf",
+      path: "../../../public/fonts/Supreme/FuturaHeavyOblique.ttf",
       weight: "900",
       style: "oblique",
     },
     {
-      path: "../../public/fonts/Supreme/FuturaLight.ttf",
+      path: "../../../public/fonts/Supreme/FuturaLight.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Supreme/FuturaMedium.ttf",
+      path: "../../../public/fonts/Supreme/FuturaMedium.ttf",
       weight: "500",
       style: "normal",
     },
@@ -90,7 +90,7 @@ export default function RootLayout({
               </Link>
 
               <nav>
-                <ul className="flex items-center justify-start gap-6">
+                <ul className="flex items-center justify-start gap-3 md:gap-6">
                   <li key="home">
                     <Link href="/">
                       <span className="text-white underline text-sh3 md:text-lh3">
@@ -102,6 +102,14 @@ export default function RootLayout({
                     <Link href="/gallery">
                       <span className="text-white underline text-sh3 md:text-lh3">
                         Gallery
+                      </span>
+                    </Link>
+                  </li>
+                  <li key="ceramic-coating">
+                    <Link href="/ceramic-coating">
+                      <span className="text-white underline text-sh3 md:text-lh3 whitespace-nowrap">
+                        <span className="md:hidden">Ceramic</span>
+                        <span className="hidden md:inline">Ceramic Coating</span>
                       </span>
                     </Link>
                   </li>
