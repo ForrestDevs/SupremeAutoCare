@@ -1,53 +1,48 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import { imagePublicByIndex } from "./imageByIndex";
+import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
+
+import type { GalleryPhoto } from "@/lib/gallery";
 
 type ThumbProps = {
   selected: boolean;
-  imgSrc: string;
-  index: number;
+  photo: GalleryPhoto;
   onClick: () => void;
 };
 
-export const Thumb: React.FC<ThumbProps> = (props) => {
-  const { selected, imgSrc, index, onClick } = props;
-
+export const Thumb: React.FC<ThumbProps> = ({ selected, photo, onClick }) => {
   return (
-    <div
-      className={`pl-2 w-full cursor-default ${selected ? "opacity-100" : ""}`}
-    >
+    <div className="pl-2 shrink-0 grow-0 basis-1/2 sm:basis-1/3 lg:basis-1/5 cursor-default">
       <button
         onClick={onClick}
         type="button"
-        className="min-w-[150px] h-44 w-full overflow-hidden block cursor-pointer touch-manipulation"
+        className="h-44 w-full overflow-hidden block cursor-pointer touch-manipulation"
       >
-        <Image
-          className={`h-full object-cover transition-opacity duration-200 transform scale-[90%] ${
-            selected ? "opacity-100" : "opacity-20"
-          }`}
-          width={400}
-          height={400}
-          src={imgSrc}
-          alt="Your alt text"
-          priority
-        />
+        <div className="relative h-full w-full">
+          <Image
+            className={`object-cover transition-opacity duration-200 transform scale-[90%] ${
+              selected ? "opacity-100" : "opacity-20"
+            }`}
+            fill
+            sizes="200px"
+            src={photo.thumbSrc}
+            alt={photo.alt}
+          />
+        </div>
       </button>
     </div>
   );
 };
 
 type PropType = {
-  slides: number[];
-  options?: EmblaOptionsType;
+  photos: GalleryPhoto[];
 };
 
-const Carousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+const Carousel: React.FC<PropType> = ({ photos }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
+  const [emblaMainRef, emblaMainApi] = useEmblaCarousel();
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
     dragFree: true,
@@ -74,36 +69,49 @@ const Carousel: React.FC<PropType> = (props) => {
     emblaMainApi.on("reInit", onSelect);
   }, [emblaMainApi, onSelect]);
 
+  if (photos.length === 0) return null;
+
+  const selectedPhoto = photos[selectedIndex] ?? photos[0];
+
   return (
     <div className="h-full w-full bg-black">
       <div className="overflow-hidden w-full" ref={emblaMainRef}>
         <div className="flex touch-pan-y -ml-2 select-none">
-          {slides.map((index) => (
-            <div className="pl-2 min-w-full max-h-[50vh]" key={index}>
-              <div className="overflow-hidden h-full">
+          {photos.map((photo, index) => (
+            <div className="pl-2 min-w-full" key={photo.id}>
+              <div className="relative w-full h-[45vh] md:h-[60vh]">
                 <Image
-                  width={600}
-                  height={500}
-                  className="m-auto"
-                  src={imagePublicByIndex(index)}
-                  alt="Your alt text"
-                  priority
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                  src={photo.src}
+                  alt={photo.alt}
+                  priority={index === 0}
                 />
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <div className="flex flex-col items-center gap-1 pt-4 text-center">
+        <p className="text-white text-sh4 md:text-lh4 uppercase">
+          {selectedPhoto.title}
+        </p>
+        <p className="text-slate-400 text-sp2 md:text-lp2 uppercase tracking-widest">
+          {selectedPhoto.categoryLabel}
+        </p>
+      </div>
+
       <div className="py-6">
         <div className="overflow-hidden w-full" ref={emblaThumbsRef}>
           <div className="flex select-none cursor-default w-full">
-            {slides.map((index) => (
+            {photos.map((photo, index) => (
               <Thumb
                 onClick={() => onThumbClick(index)}
                 selected={index === selectedIndex}
-                index={index}
-                imgSrc={imagePublicByIndex(index)}
-                key={index}
+                photo={photo}
+                key={photo.id}
               />
             ))}
           </div>

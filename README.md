@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Supreme Auto Care — [Next.js](https://nextjs.org/) marketing site with a [Payload CMS](https://payloadcms.com/) admin for the gallery.
 
 ## Getting Started
 
-First, run the development server:
+Copy the environment file and fill it in:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Variable                | Required | What it is                                                        |
+| ----------------------- | -------- | ----------------------------------------------------------------- |
+| `DATABASE_URI`          | yes      | Postgres connection string used by Payload                          |
+| `PAYLOAD_SECRET`        | yes      | Secret used to sign admin sessions (`openssl rand -hex 32`)         |
+| `BLOB_READ_WRITE_TOKEN` | prod     | Vercel Blob token. Without it, uploads are written to local `./media` |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Then create the database tables and start the dev server:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm install
+npm run migrate
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) for the site and
+[http://localhost:3000/admin](http://localhost:3000/admin) for the CMS. The first
+visit to `/admin` asks you to create an admin user.
 
-To learn more about Next.js, take a look at the following resources:
+## Editing the gallery
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`Gallery` in the admin holds the photos shown on `/gallery` and the "Recent Work"
+strip on `/ceramic-coating`. Each entry has a title, an image, a category, and a
+sort order (lower numbers show up first). Images are uploaded into `Media`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Until the collection has content, both pages fall back to the photos bundled in
+`public/gallery`, so the site never renders an empty gallery. See
+`src/lib/gallery.ts`.
 
-## Deploy on Vercel
+## Project layout
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+  app/(frontend)/      the public marketing site
+  app/(payload)/       the Payload admin + REST/GraphQL API (generated)
+  collections/         Payload collections: Gallery, Media, Users
+  migrations/          database migrations, committed to the repo
+  payload.config.ts    Payload configuration
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Changing the CMS schema
+
+After editing anything under `src/collections`:
+
+```bash
+npm run generate:types    # refresh src/payload-types.ts
+npm run migrate:create    # write a migration for the schema change
+npm run migrate           # apply it locally
+```
+
+## Deploying to Vercel
+
+Set `DATABASE_URI`, `PAYLOAD_SECRET`, and `BLOB_READ_WRITE_TOKEN` in the project's
+environment variables. `BLOB_READ_WRITE_TOKEN` matters in production — Vercel's
+filesystem is read-only, so without it uploads through the admin will fail.
+
+Migrations do not run as part of `next build`. Either run `npm run migrate` against
+the production database when the schema changes, or set the Vercel build command to
+`payload migrate && next build` so deploys apply them automatically.

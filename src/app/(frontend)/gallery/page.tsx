@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Carousel from "@/components/gallery/Carousel";
+import { getGalleryPhotos } from "@/lib/gallery";
 import { generateMetadata } from "@/lib/metadata";
 
 export const metadata = generateMetadata(
@@ -7,10 +8,13 @@ export const metadata = generateMetadata(
   "Welcome to our gallery page, where you can browse through stunning images of the cars we have had the pleasure to detail"
 );
 
-const SLIDE_COUNT = 26;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+// Photos are managed in Payload, so render on request instead of baking the
+// gallery into the build output.
+export const dynamic = "force-dynamic";
 
-export default function Gallery() {
+export default async function Gallery() {
+  const photos = await getGalleryPhotos();
+
   return (
     <main className="flex flex-col justify-between w-full bg-black">
       <section className="flex relative w-full h-[100vh]">
@@ -54,7 +58,7 @@ export default function Gallery() {
             OUR WORK
           </h2>
           <div className="w-full h-full p-6">
-            <Carousel slides={SLIDES} options={{}} />
+            <Carousel photos={photos} />
           </div>
         </div>
       </section>
