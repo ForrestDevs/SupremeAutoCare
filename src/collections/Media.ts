@@ -9,6 +9,7 @@ export const Media: CollectionConfig = {
     read: () => true,
   },
   upload: {
+    adminThumbnail: "thumbnail",
     mimeTypes: ["image/*"],
     focalPoint: true,
     imageSizes: [
