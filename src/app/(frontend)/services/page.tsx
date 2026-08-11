@@ -105,8 +105,8 @@ export default function Services() {
               <ServiceCard
                 title="Ceramic Coating"
                 time="6 Hours"
-                price="$599.99"
-                callLink="ceramic-coating"
+                price="$599"
+                callLink="/ceramic-coating"
                 imageSrc={"/gallery/IMG_2706.jpg"}
                 imageAlt="Ceramic Coating"
               />

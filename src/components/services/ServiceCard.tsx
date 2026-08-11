@@ -38,7 +38,7 @@ export default function ServiceCard({ ...props }: CardProps) {
         </div>
 
         <div className="card-actions justify-end">
-          <Link href={`services/${props.callLink}`}>
+          <Link href={props.callLink.startsWith("/") ? props.callLink : `services/${props.callLink}`}>
             <p data-theme="light" className="btn">Book Now</p>
           </Link>
         </div>
