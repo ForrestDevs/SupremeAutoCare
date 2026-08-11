@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import rolls from "@/assets/images/home/rolls.webp";
 import audi from "@/assets/images/home/audi.webp";
 import porsche from "@/assets/images/home/porsche.webp";
@@ -19,13 +20,18 @@ export default function Section6() {
 
           <p className="text-white text-sp2 md:text-lp2 pl-8">
             At Supreme Auto Care, we specialize in providing expert detailing
-            services for high-end automobiles. We understand the importance of
-            maintaining your investment, regardless of the make or model. With
-            our extensive knowledge and experience, we are equipped to handle
-            all types of vehicles and provide the same level of care and
-            attention to detail to each one. Trust us to keep your car looking
-            and feeling brand new.
+            services, including paint correction and ceramic coating, for
+            high-end automobiles. We understand the importance of maintaining
+            your investment, regardless of the make or model. With our
+            extensive knowledge and experience, we are equipped to handle all
+            types of vehicles and provide the same level of care and attention
+            to detail to each one. Trust us to keep your car looking and
+            feeling brand new.
           </p>
+
+          <Link href="/ceramic-coating" className="text-white text-sp2 md:text-lp2 pl-8 underline font-semibold inline-block mt-4">
+            Explore Ceramic Coating →
+          </Link>
         </div>
       </article>
 

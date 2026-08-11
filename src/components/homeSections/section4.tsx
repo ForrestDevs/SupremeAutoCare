@@ -1,6 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
 import teslaParallax from "@/assets/images/home/teslaParallax.webp";
-
 export default function Section4() {
   return (
     <section className="flex relative w-full min-h-[40vh]">
@@ -10,7 +10,6 @@ export default function Section4() {
         className="absolute w-full h-full object-cover z-1"
         priority
       />
-
       <article className="relative bg-black text-white rounded-lg m-16 py-8 px-4 w-[60%] md:w-[40%] h-fit">
         <div className="border-l">
           <p className="text-white text-sh6 md:text-lh6 pl-8 mb-6">
@@ -24,10 +23,13 @@ export default function Section4() {
             customer service, and our commitment to using the highest quality
             products and techniques. Our team of professionals have a passion
             for perfection and will go above and beyond to exceed your
-            expectations. Trust us to provide your luxury vehicle with the
-            expert care and maintenance it deserves. Experience the ultimate in
-            automotive detailing services with Supreme Auto Care.
+            expectations. Trust us to provide your luxury and exotic vehicle
+            with the expert care and maintenance it deserves. Experience the
+            ultimate in automotive detailing services with Supreme Auto Care.
           </h2>
+          <Link href="/gallery" className="text-white text-sp2 md:text-lp2 pl-8 underline font-semibold inline-block mt-4">
+            See Our Work →
+          </Link>
         </div>
       </article>
     </section>

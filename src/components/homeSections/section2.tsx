@@ -1,6 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
 import nissan from "@/assets/images/home/nissan.webp";
-
 export default function Section2() {
   return (
     <section className="flex flex-col md:flex-row relative w-full xl:py-16 bg-black">
@@ -12,16 +12,16 @@ export default function Section2() {
           <p className="text-white text-sp1 md:text-lp1 mb-6 border-l-2 pl-8">
             Our Story and Commitment to Excellence
           </p>
-
           <h1 className="text-white text-sp2 md:text-lp2 pl-8">
-            At Supreme Auto Care, we&apos;re passionate about cars and dedicated
-            to delivering exceptional auto detailing services that exceed our
-            clients&apos; expectations. Our commitment to excellence is
-            reflected in every aspect of our service. From the products we use
-            to the techniques we employ, we go above and beyond to ensure that
-            your car receives the attention it deserves. Whether it&apos;s a
-            simple wash or a full detail, we treat every vehicle with the same
-            level of care and precision.
+            At Supreme Auto Care, Scarborough&apos;s trusted auto detailing
+            team, we&apos;re passionate about cars and dedicated to delivering
+            exceptional auto detailing services that exceed our clients&apos;
+            expectations. Our commitment to excellence is reflected in every
+            aspect of our service. From the products we use to the techniques
+            we employ, we go above and beyond to ensure that your car receives
+            the attention it deserves. Whether it&apos;s a simple wash or a
+            full detail, we treat every vehicle with the same level of care
+            and precision.
           </h1>
           <h1 className="text-white text-sp2 md:text-lp2 pl-8">
             If you&apos;re looking for a professional, reliable, and top-quality
@@ -29,9 +29,11 @@ export default function Section2() {
             Contact us today to schedule your appointment and experience the
             difference for yourself.
           </h1>
+          <Link href="/services" className="text-white text-sp2 md:text-lp2 pl-8 underline font-semibold inline-block mt-4">
+            Book Your Detail →
+          </Link>
         </div>
       </article>
-
       <div className="hidden md:w-[50%] md:flex">
         <Image
           src={nissan}
