@@ -141,7 +141,7 @@ export default function RootLayout({
           <div className="flex flex-col sm:items-center lg:items-start gap-4 h-full order-3 lg:order-none w-full lg:w-auto">
             <Link href="tel:(647)534-1245">
               <strong className="text-lp2">Tel: </strong>
-              <span className="text-lp2">(647)534-1245</span>
+              <span className="text-lp2">(647) 534-1245</span>
             </Link>
             <Link href="mailto:Abbosdetailing@gmail.com">
               <strong className="text-lp2">Email: </strong>
