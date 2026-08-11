@@ -30,7 +30,7 @@ export default function Section5() {
           </span>
 
           <span className="flex flex-col items-start justify-evenly whitespace-nowrap">
-            <p className="text-sh2 md:text-lh2 font-light">49$+</p>
+            <p className="text-sh2 md:text-lh2 font-light">$49+</p>
             <p className="text-sp3 md:text-lp3 font-medium  w-full uppercase pt-6 border-t">
               Cost Per Service
             </p>
