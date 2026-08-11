@@ -150,13 +150,13 @@ export default function RootLayout({
               </span>
             </Link>
             <Link
-              href="https://www.google.com/maps/search/?api=1&query=88+Crockford+Blvd+%2310,+Scarborough,+Ontario,+M1R+3C3"
+              href="https://www.google.com/maps/search/?api=1&query=84+Crockford+Blvd+%233,+Scarborough,+Ontario,+M1R+3C3"
               target="_blank"
               rel="noopener noreferrer"
             >
               <strong className="text-lp2">Location: </strong>
               <span className="text-lp2 underline">
-                88 Crockford Blvd #10, Scarborough, Ontario, M1R 3C3
+                84 Crockford Blvd #3, Scarborough, Ontario, M1R 3C3
               </span>
             </Link>
 

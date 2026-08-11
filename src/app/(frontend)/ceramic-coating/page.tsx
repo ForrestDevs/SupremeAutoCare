@@ -461,12 +461,12 @@ export default async function CeramicCoating() {
                 Location
               </span>
               <Link
-                href="https://www.google.com/maps/search/?api=1&query=88+Crockford+Blvd+%2310,+Scarborough,+Ontario,+M1R+3C3"
+                href="https://www.google.com/maps/search/?api=1&query=84+Crockford+Blvd+%233,+Scarborough,+Ontario,+M1R+3C3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sp2 md:text-lp2 underline"
               >
-                88 Crockford Blvd #10, Scarborough, ON
+                84 Crockford Blvd #3, Scarborough, ON
               </Link>
             </div>
             <div>
