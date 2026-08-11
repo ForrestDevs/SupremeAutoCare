@@ -9,7 +9,7 @@ import { generateMetadata } from "@/lib/metadata";
 
 export const metadata = generateMetadata(
   "Ceramic Coating Scarborough | Supreme Auto Care",
-  "9H ceramic coating for exotics, luxury cars and dealer inventory in Scarborough. 5-9 year protection, paint correction included. Book your free paint assessment."
+  "10H ceramic coating for exotics, luxury cars and dealer inventory in Scarborough. 5-9 year protection, paint correction included. Book your free paint assessment."
 );
 
 // The recent work strip is pulled from Payload, so render on request.
@@ -18,7 +18,7 @@ export const dynamic = "force-dynamic";
 const BOOKING_LINK = "/services/ceramic-coating";
 
 const STATS = [
-  { value: "9H", label: "Coating Hardness" },
+  { value: "10H", label: "Coating Hardness" },
   { value: "5–9YR", label: "Protection Life" },
   { value: "1000+", label: "Vehicles Coated" },
   { value: "100%", label: "Returning Clients" },
@@ -28,7 +28,7 @@ const COMPARISON = {
   columns: ["Carnauba Wax", "Paint Sealant", "Ceramic Coating"],
   rows: [
     { label: "Lasts", values: ["4–6 weeks", "3–6 months", "5–9 years"] },
-    { label: "Hardness added", values: ["None", "Minimal", "Up to 9H"] },
+    { label: "Hardness added", values: ["None", "Minimal", "Up to 10H"] },
     { label: "UV / oxidation guard", values: ["Weak", "Moderate", "Strong"] },
     { label: "Hydrophobic beading", values: ["Fades fast", "Moderate", "Sustained"] },
     { label: "Swirl / chemical resistance", values: ["None", "Low", "High"] },
@@ -48,7 +48,7 @@ const PACKAGES = [
     protection: "2-Year Protection",
     features: [
       "Dual-stage decontamination wash",
-      "Single-layer 9H SiO2 coating",
+      "Single-layer SiO2 coating",
       "Wheel faces & tire shine included",
       "Hydrophobic gloss finish",
       "Written 2-year coating warranty",
@@ -81,7 +81,7 @@ const PACKAGES = [
     features: [
       "Everything in Signature, plus:",
       "Stage 2 correction — full swirl & scratch removal",
-      "Graphene-infused ceramic, self-healing top coat",
+      "10H graphene-infused ceramic, self-healing top coat",
       "Full wheel-off wheel & barrel coating",
       "Interior leather / alcantara ceramic guard",
       "Priority booking for Ferrari, Lamborghini, McLaren-tier paint",
@@ -149,7 +149,7 @@ export default async function CeramicCoating() {
       <section className="flex items-center relative w-full h-[100vh]">
         <Image
           src={redLambo}
-          alt="Lamborghini finished with a 9H ceramic coating at Supreme Auto Care"
+          alt="Lamborghini finished with a 10H ceramic coating at Supreme Auto Care"
           className="h-full w-full object-cover z-1"
           priority
         />
@@ -168,7 +168,7 @@ export default async function CeramicCoating() {
               </p>
             </div>
             <h1 className="text-white text-sh4 md:text-lh4 px-6">
-              9H ceramic protection with correction included, applied by the same
+              10H ceramic protection with correction included, applied by the same
               two hands every time
             </h1>
           </div>
@@ -266,6 +266,9 @@ export default async function CeramicCoating() {
             </tbody>
           </table>
         </div>
+        <p className="mx-8 md:mx-16 mt-4 text-sp3 md:text-lp3 text-gray-500">
+          *Hardness (H) refers to pencil hardness — a scale measuring a coating&apos;s scratch resistance, not curing or drying time.
+        </p>
       </section>
 
       <section id="packages" className="w-full bg-black py-10">
@@ -298,7 +301,7 @@ export default async function CeramicCoating() {
           <div className="lg:w-2/3">
             <p className="uppercase text-sh6 md:text-lh6 pl-8 mb-4">The Process</p>
             <p className="text-sp1 md:text-lp1 border-l-2 border-gray-600 pl-8">
-              How We Get To 9H
+              Our Process — How We Get a Long-Lasting Shine
             </p>
           </div>
         </div>
