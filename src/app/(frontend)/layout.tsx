@@ -98,13 +98,6 @@ export default function RootLayout({
                       </span>
                     </Link>
                   </li>
-                  <li key="gallery">
-                    <Link href="/gallery">
-                      <span className="text-white underline text-sh3 md:text-lh3">
-                        Gallery
-                      </span>
-                    </Link>
-                  </li>
                   <li key="ceramic-coating">
                     <Link href="/ceramic-coating">
                       <span className="text-white underline text-sh3 md:text-lh3 whitespace-nowrap">
@@ -117,6 +110,13 @@ export default function RootLayout({
                     <Link href="/services">
                       <span className="text-white underline text-sh3 md:text-lh3">
                         Services
+                      </span>
+                    </Link>
+                  </li>
+                  <li key="gallery">
+                    <Link href="/gallery">
+                      <span className="text-white underline text-sh3 md:text-lh3">
+                        Gallery
                       </span>
                     </Link>
                   </li>
