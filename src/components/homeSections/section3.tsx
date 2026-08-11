@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import phantom from "@/assets/images/home/phantom.webp";
 import jeep from "@/assets/images/home/jeep.webp";
 import escalade from "@/assets/images/home/escalade.webp";
@@ -32,6 +33,9 @@ export default function Section3() {
                 bucket hand wash, ceramic wax treatment, and tire shine to
                 protect the paint and restore your wheels to their former glory.
               </h1>
+              <Link href="/services" className="text-sp2 md:text-lp2 underline font-semibold inline-block mt-4">
+                View Pricing →
+              </Link>
             </div>
           </article>
 
@@ -57,7 +61,7 @@ export default function Section3() {
 
           <article className="flex items-center w-full md:w-1/2 order-1 md:order-none">
             <div className="m-12">
-              <h1 className="text-sh2 md:text-lh2">Correction</h1>
+              <h1 className="text-sh2 md:text-lh2">Paint Correction</h1>
               <h1 className="text-sp2 md:text-lp2">
                 We offer two stages of paint correction to restore the showroom
                 shine to your vehicle. Our Stage 1 package removes moderate
@@ -70,6 +74,9 @@ export default function Section3() {
                 experts to provide your car with the highest level of care and
                 attention to detail.
               </h1>
+              <Link href="/services" className="text-sp2 md:text-lp2 underline font-semibold inline-block mt-4">
+                View Pricing →
+              </Link>
             </div>
           </article>
         </div>
@@ -82,14 +89,15 @@ export default function Section3() {
               </h1>
               <h1 className="text-sp2 md:text-lp2">
                 Our ceramic coating packages provide the ultimate protection for
-                your luxury vehicle. Our team of experts uses only the highest
-                quality products and techniques to ensure a flawless finish.
-                Ceramic coating adds an extra layer of protection against the
-                elements, including UV rays and environmental contaminants. With
-                a ceramic coating from Abbos Detailing, you can rest assured
-                that your vehicle will maintain its showroom shine for years to
-                come.
+                your luxury vehicle, with tiers ranging from essential UV and
+                contaminant protection to our top-tier graphene coating for
+                years of showroom shine. Our team uses only the highest quality
+                products and techniques to ensure a flawless, long-lasting
+                finish.
               </h1>
+              <Link href="/ceramic-coating" className="text-sp2 md:text-lp2 underline font-semibold inline-block mt-4">
+                View Packages →
+              </Link>
             </div>
           </article>
 

@@ -81,7 +81,7 @@ export default function RootLayout({
               <Link href="/">
                 <Image
                   src={Logo}
-                  alt="Abbos Detailing Logo"
+                  alt="Supreme Auto Care Logo"
                   width={200}
                   height={200}
                   priority
@@ -131,7 +131,7 @@ export default function RootLayout({
           <div className="h-full order-1 lg:order-none ">
             <Image
               src={Logo}
-              alt="Abbos Detailing Logo"
+              alt="Supreme Auto Care Logo"
               width={250}
               height={250}
               priority

@@ -16,7 +16,7 @@ export default function Services() {
           width={4032}
           height={3024}
           src={"/gallery/IMG_2598.jpg"}
-          alt="Abbos Detailing Logo"
+          alt="Supreme Auto Care Logo"
           className="h-full w-full object-cover z-1"
           priority
         />

@@ -18,7 +18,7 @@ export default function Section5() {
 
       <div data-theme="light" className="flex flex-col justify-center w-full md:w-1/2 order-1 md:order-none px-20 py-4 text-black">
         <h3 className="text-sh3 md:text-lh3 text-left my-4">
-          Abbos Detailing In Numbers
+          Supreme Auto Care In Numbers
         </h3>
 
         <div className="grid gap-x-16 gap-y-8 grid-cols-2">
