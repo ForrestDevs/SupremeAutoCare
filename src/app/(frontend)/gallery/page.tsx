@@ -4,7 +4,8 @@ import { getGalleryPhotos } from "@/lib/gallery";
 import { generateMetadata } from "@/lib/metadata";
 export const metadata = generateMetadata(
   "Supreme Auto Care | Gallery",
-  "Welcome to our gallery page, where you can browse through stunning images of the cars we have had the pleasure to detail"
+  "Welcome to our gallery page, where you can browse through stunning images of the cars we have had the pleasure to detail",
+  "/gallery"
 );
 // Photos are managed in Payload, so render on request instead of baking the
 // gallery into the build output.

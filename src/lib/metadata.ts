@@ -1,17 +1,23 @@
 export const generateMetadata = (
   title = "Supreme Auto Care",
-  description = "Experience Detailing That Goes Above And Beyond Your Expectations"
+  description = "Experience Detailing That Goes Above And Beyond Your Expectations",
+  path = "/"
 ) => {
+  const baseUrl = "https://www.supremeautocare.ca";
+  const pageUrl = `${baseUrl}${path}`;
+
   const metadataConfig = {
     title,
     description,
-    url: "https://www.supremeautocare.ca/",
+    url: pageUrl,
     image: "/icon.png",
     email: "abbosdetailing@gmail.com",
   };
-
   return {
-    metadataBase: new URL(metadataConfig.url),
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: pageUrl,
+    },
     robots: "follow, index",
     title: metadataConfig.title,
     description: metadataConfig.description,
@@ -54,9 +60,9 @@ export const generateMetadata = (
       "mobile car detailing toronto",
       "mobile car detailing scarborough",
       "detailing",
-      "car detailing", 
-      "car wash", 
-      "car cleaning", 
+      "car detailing",
+      "car wash",
+      "car cleaning",
       "car waxing"
     ],
     openGraph: {

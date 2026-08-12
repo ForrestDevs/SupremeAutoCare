@@ -5,7 +5,8 @@ import { generateMetadata } from "@/lib/metadata";
 
 export const metadata = generateMetadata(
   "Supreme Auto Care | Services",
-  "Book your detailing appointment today!"
+  "Book your detailing appointment today!",
+  "/services"
 );
 
 export default function Services() {

@@ -9,7 +9,8 @@ import { generateMetadata } from "@/lib/metadata";
 
 export const metadata = generateMetadata(
   "Ceramic Coating Scarborough | Supreme Auto Care",
-  "10H ceramic coating for exotics, luxury cars and dealer inventory in Scarborough. 5-9 year protection, paint correction included. Book your free paint assessment."
+  "10H ceramic coating for exotics, luxury cars and dealer inventory in Scarborough. 5-9 year protection, paint correction included. Book your free paint assessment.",
+  "/ceramic-coating"
 );
 
 // The recent work strip is pulled from Payload, so render on request.
