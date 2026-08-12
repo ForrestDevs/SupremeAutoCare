@@ -22,17 +22,17 @@ export default function Section3() {
         <div className="flex flex-col md:flex-row justify-center">
           <article className="flex items-center w-full md:w-1/2 order-1 md:order-none">
             <div className="m-12">
-              <h1 className="text-sh2 md:text-lh2">
+              <h2 className="text-sh2 md:text-lh2">
                 Interior Detail and Exterior Wash
-              </h1>
-              <h1 className="text-sp2 md:text-lp2">
+              </h2>
+              <p className="text-sp2 md:text-lp2">
                 Our team uses a combination of steam, shampooing, and vacuuming
                 to clean and freshen up all surfaces, including the seats and
                 floors. We also remove mild salt stains, wash the mats and door
                 jams, and clean the inside windows. This package includes a dual
                 bucket hand wash, ceramic wax treatment, and tire shine to
                 protect the paint and restore your wheels to their former glory.
-              </h1>
+              </p>
               <Link href="/services" className="text-sp2 md:text-lp2 underline font-semibold inline-block mt-4">
                 View Pricing →
               </Link>
@@ -61,8 +61,8 @@ export default function Section3() {
 
           <article className="flex items-center w-full md:w-1/2 order-1 md:order-none">
             <div className="m-12">
-              <h1 className="text-sh2 md:text-lh2">Paint Correction</h1>
-              <h1 className="text-sp2 md:text-lp2">
+              <h2 className="text-sh2 md:text-lh2">Paint Correction</h2>
+              <p className="text-sp2 md:text-lp2">
                 We offer two stages of paint correction to restore the showroom
                 shine to your vehicle. Our Stage 1 package removes moderate
                 swirling and includes protection to make the paint last. This
@@ -73,7 +73,7 @@ export default function Section3() {
                 1 polish, ceramic wax treatment, and tire shine. Trust our
                 experts to provide your car with the highest level of care and
                 attention to detail.
-              </h1>
+              </p>
               <Link href="/services" className="text-sp2 md:text-lp2 underline font-semibold inline-block mt-4">
                 View Pricing →
               </Link>
@@ -84,17 +84,17 @@ export default function Section3() {
         <div className="flex flex-col md:flex-row justify-center">
           <article className="flex items-center w-full md:w-1/2 order-1 md:order-none">
             <div className="m-12">
-              <h1 className="text-sh2 md:text-lh2">
+              <h2 className="text-sh2 md:text-lh2">
                 Ceramic Coating
-              </h1>
-              <h1 className="text-sp2 md:text-lp2">
+              </h2>
+              <p className="text-sp2 md:text-lp2">
                 Our ceramic coating packages provide the ultimate protection for
                 your luxury vehicle, with tiers ranging from essential UV and
                 contaminant protection to our top-tier graphene coating for
                 years of showroom shine. Our team uses only the highest quality
                 products and techniques to ensure a flawless, long-lasting
                 finish.
-              </h1>
+              </p>
               <Link href="/ceramic-coating" className="text-sp2 md:text-lp2 underline font-semibold inline-block mt-4">
                 View Packages →
               </Link>

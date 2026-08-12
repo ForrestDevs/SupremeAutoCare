@@ -12,7 +12,7 @@ export default function Section2() {
           <p className="text-white text-sp1 md:text-lp1 mb-6 border-l-2 pl-8">
             Our Story and Commitment to Excellence
           </p>
-          <h1 className="text-white text-sp2 md:text-lp2 pl-8">
+          <p className="text-white text-sp2 md:text-lp2 pl-8">
             At Supreme Auto Care, Scarborough&apos;s trusted auto detailing
             team, we&apos;re passionate about cars and dedicated to delivering
             exceptional auto detailing services that exceed our clients&apos;
@@ -22,13 +22,13 @@ export default function Section2() {
             the attention it deserves. Whether it&apos;s a simple wash or a
             full detail, we treat every vehicle with the same level of care
             and precision.
-          </h1>
-          <h1 className="text-white text-sp2 md:text-lp2 pl-8">
+          </p>
+          <p className="text-white text-sp2 md:text-lp2 pl-8">
             If you&apos;re looking for a professional, reliable, and top-quality
             auto detailing service, look no further than Supreme Auto Care.
             Contact us today to schedule your appointment and experience the
             difference for yourself.
-          </h1>
+          </p>
           <Link href="/services" className="text-white text-sp2 md:text-lp2 pl-8 underline font-semibold inline-block mt-4">
             Book Your Detail →
           </Link>

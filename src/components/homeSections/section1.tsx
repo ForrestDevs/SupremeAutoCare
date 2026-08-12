@@ -28,7 +28,7 @@ export default function Section1() {
               </p>
             </div>
             <h1 className="text-white text-sh4 md:text-lh4 px-6">
-              Experience Detailing That Goes Above And Beyond Your Expectations
+              Experience Auto Detailing in Scarborough and the Toronto GTA That Goes Above and Beyond
             </h1>
           </div>
 
