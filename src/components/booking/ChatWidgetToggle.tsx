@@ -4,13 +4,15 @@ import { useEffect, useRef, useState } from "react";
 
 function styleChatWidget(el: HTMLElement, open: boolean) {
   el.style.setProperty("position", "fixed", "important");
-  el.style.setProperty("bottom", "24px", "important");
+  el.style.setProperty("bottom", "96px", "important");
   el.style.setProperty("right", "24px", "important");
   el.style.setProperty("z-index", "9999", "important");
-  el.style.setProperty("width", "360px", "important");
+  el.style.setProperty("width", "400px", "important");
   el.style.setProperty("max-width", "calc(100vw - 32px)", "important");
-  el.style.setProperty("height", "520px", "important");
-  el.style.setProperty("max-height", "calc(100vh - 120px)", "important");
+  // The widget's own layout (banner + transcript + input) needs ~592px;
+  // anything shorter clips the message input at the bottom.
+  el.style.setProperty("height", "620px", "important");
+  el.style.setProperty("max-height", "calc(100vh - 160px)", "important");
   el.style.setProperty("box-shadow", "0 10px 40px rgba(0,0,0,0.35)", "important");
   el.style.setProperty("border-radius", "12px", "important");
   el.style.setProperty("overflow", "hidden", "important");
@@ -47,9 +49,12 @@ export default function ChatWidgetToggle() {
       type="button"
       onClick={() => setOpen((value) => !value)}
       aria-label={open ? "Close chat" : "Open chat"}
-      className="fixed bottom-6 right-6 z-[9998] w-14 h-14 rounded-full bg-[#ED1C24] text-white text-2xl flex items-center justify-center shadow-lg"
+      className="fixed bottom-6 right-6 z-[9998] flex items-center gap-2 rounded-full bg-[#ED1C24] pl-4 pr-5 py-3 text-white shadow-lg transition-colors hover:bg-[#c8181f]"
     >
-      {open ? "✕" : "💬"}
+      <span className="text-xl leading-none">{open ? "✕" : "💬"}</span>
+      <span className="text-sm font-semibold uppercase tracking-wide">
+        {open ? "Close" : "Chat with us"}
+      </span>
     </button>
   );
 }
