@@ -9,7 +9,6 @@ import PackageCard from "@/components/ceramic/PackageCard";
 import { generateMetadata } from "@/lib/metadata";
 import { BookingModalProvider } from "@/components/booking/BookingModal";
 import BookNowTrigger from "@/components/booking/BookNowTrigger";
-import ChatWidgetToggle from "@/components/booking/ChatWidgetToggle";
 export const metadata = {
   ...generateMetadata(
     "TEST PAGE — Ceramic Coating",
@@ -503,7 +502,6 @@ export default async function CeramicCoating() {
         data-widget-id="6a8a18e907754ad08a6b83b8"
         strategy="lazyOnload"
       />
-      <ChatWidgetToggle />
     </main>
     </BookingModalProvider>
   );
