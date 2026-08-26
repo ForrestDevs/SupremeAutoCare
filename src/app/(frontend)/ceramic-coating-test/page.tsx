@@ -7,6 +7,9 @@ import FaqList from "@/components/ceramic/FaqList";
 import { getGalleryPhotos } from "@/lib/gallery";
 import PackageCard from "@/components/ceramic/PackageCard";
 import { generateMetadata } from "@/lib/metadata";
+import { BookingModalProvider } from "@/components/booking/BookingModal";
+import BookNowTrigger from "@/components/booking/BookNowTrigger";
+import ChatWidgetToggle from "@/components/booking/ChatWidgetToggle";
 export const metadata = {
   ...generateMetadata(
     "TEST PAGE — Ceramic Coating",
@@ -149,16 +152,8 @@ export default async function CeramicCoating() {
   const recentWork = await getGalleryPhotos({ category: "ceramic-coating", limit: 4 });
 
   return (
+    <BookingModalProvider>
     <main className="flex flex-col justify-between w-full bg-black">
-      <section className="w-full bg-yellow-300 py-10 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-black font-bold text-2xl mb-2">🧪 TEST PAGE — New Booking Calendar</p>
-          <p className="text-black mb-6">This section is for internal testing only. Compare against the current booking system before any live changes.</p>
-        </div>
-        <div className="max-w-3xl mx-auto">
-          <iframe src="https://api.leadconnectorhq.com/widget/group/3nrW5erBjaJKQQUFDZWq" allow="payment" style={{ width: "100%", border: "none", overflow: "hidden" }} scrolling="no" id="3nrW5erBjaJKQQUFDZWq_1787675885543"></iframe>
-        </div>
-      </section>
       <section className="flex items-center relative w-full h-[100vh]">
         <Image
           src={redLambo}
@@ -188,11 +183,11 @@ export default async function CeramicCoating() {
 
           <div className="flex flex-wrap items-center justify-center gap-4 mt-16">
             <div data-theme="light" className="btn">
-              <Link href={BOOKING_LINK}>
+              <BookNowTrigger>
                 <p className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
                   Book A Free Assessment
                 </p>
-              </Link>
+              </BookNowTrigger>
             </div>
             <div className="btn btn-outline text-white hover:bg-white hover:text-black">
               <a href="#packages">
@@ -304,7 +299,7 @@ export default async function CeramicCoating() {
 
         <div className="grid grid-flow-row lg:grid-cols-3 gap-8 mx-8 md:mx-16">
           {PACKAGES.map((pkg) => (
-            <PackageCard key={pkg.title} {...pkg} bookLink={BOOKING_LINK} />
+            <PackageCard key={pkg.title} {...pkg} bookLink={BOOKING_LINK} opensBookingModal />
           ))}
         </div>
       </section>
@@ -359,11 +354,11 @@ export default async function CeramicCoating() {
               GTA-wide pickup on exotic and low-clearance vehicles.
             </p>
             <div data-theme="light" className="btn w-fit">
-              <Link href={BOOKING_LINK}>
+              <BookNowTrigger>
                 <p className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
                   Book A Private Coating
                 </p>
-              </Link>
+              </BookNowTrigger>
             </div>
           </article>
 
@@ -508,6 +503,8 @@ export default async function CeramicCoating() {
         data-widget-id="6a8a18e907754ad08a6b83b8"
         strategy="lazyOnload"
       />
+      <ChatWidgetToggle />
     </main>
+    </BookingModalProvider>
   );
 }

@@ -1,4 +1,9 @@
+"use client";
+
+import { useContext } from "react";
 import Link from "next/link";
+
+import { BookingModalContext } from "@/components/booking/BookingModal";
 
 interface PackageCardProps {
   tag: string;
@@ -10,6 +15,7 @@ interface PackageCardProps {
   bookLink: string;
   bookLabel: string;
   featured?: boolean;
+  opensBookingModal?: boolean;
 }
 
 export default function PackageCard({
@@ -22,7 +28,9 @@ export default function PackageCard({
   bookLink,
   bookLabel,
   featured = false,
+  opensBookingModal = false,
 }: PackageCardProps) {
+  const bookingModal = useContext(BookingModalContext);
   return (
     <div
       className={`flex flex-col h-full p-8 border ${
@@ -61,11 +69,19 @@ export default function PackageCard({
       </ul>
 
       <div data-theme="light" className="btn w-full">
-        <Link href={bookLink}>
-          <p className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
-            {bookLabel}
-          </p>
-        </Link>
+        {opensBookingModal && bookingModal ? (
+          <button type="button" onClick={bookingModal.openBooking} className="w-full">
+            <p className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
+              {bookLabel}
+            </p>
+          </button>
+        ) : (
+          <Link href={bookLink}>
+            <p className="text-black text-sp1 md:text-lp1 font-bold italic uppercase">
+              {bookLabel}
+            </p>
+          </Link>
+        )}
       </div>
     </div>
   );
